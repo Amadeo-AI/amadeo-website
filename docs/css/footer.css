@@ -1,0 +1,233 @@
+.footer {
+  background: #000446;
+  padding-top: 216px;
+  padding-bottom: 20px;
+}
+
+.footer__bottom {
+  width: 100%;
+  border-top: 1px solid #80FF9F;
+  padding-top: 20px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer__bottom a,
+.footer__bottom a:hover {
+  color: #fff;
+}
+
+.footer__bottom a {
+  padding: 0 4px;
+  line-height: 1;
+  border-right: 1px solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__bottom a:last-child {
+  border-right: none;
+}
+
+.footer__bottom-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__content {
+  padding-bottom: 68px;
+}
+
+.footer__content a,
+.footer__content a:hover {
+  color: #fff;
+}
+
+.footer__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__logo {
+  margin-right: 79px;
+}
+
+.footer__logo img {
+  width: 125px;
+}
+
+.footer__cols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__platform {
+  margin-right: 140px;
+}
+
+.footer__solutions {
+  margin-right: 170px;
+}
+
+.footer__title {
+  font-size: 16px;
+  color: #80FF9F;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+a.footer__title,
+a.footer__title:hover {
+  color: #80FF9F;
+  font-weight: 400;
+  display: block;
+}
+
+a.footer__title.footer__title--bold {
+  font-weight: 700;
+}
+
+.footer__menu-link {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer__menu-link--mail {
+  font-size: 16px;
+}
+
+.connect {
+  margin-bottom: 50px;
+}
+
+.social__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__wrapper a {
+  display: block;
+  margin-right: 22px;
+}
+
+@media only screen and (max-width: 1100px) {
+  /**/
+  .footer__platform,
+  .footer__solutions {
+    margin-right: 9vw;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /**/
+  .footer {
+    padding-top: 58.667vw;
+  }
+  .footer__platform,
+  .footer__solutions,
+  .footer__logo {
+    margin-right: 5vw;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  /**/
+  .footer__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .footer__bottom-menu {
+    margin-bottom: 2vw;
+  }
+  .footer__logo {
+    margin-bottom: 6.400vw;
+  }
+  .footer__platform,
+  .footer__solutions,
+  .footer__logo {
+    margin-right: 0;
+  }
+  .footer__platform,
+  .footer__solutions {
+    width: 50%;
+    margin-bottom: 8vw;
+  }
+  .connect {
+    margin-bottom: 4vw;
+  }
+  .footer__title {
+    margin-bottom: 5.333vw;
+  }
+  .footer__menu-link {
+    margin-bottom: 4vw;
+  }
+  .footer {
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  /**/
+  .footer__bottom {
+    font-size: 2.933vw;
+    padding: 5.333vw 0;
+  }
+  .footer__bottom a {
+    padding: 0 0.9vw;
+  }
+  .footer__bottom a:first-child {
+    padding-left: 0;
+  }
+  .footer__logo img {
+    width: 33.333vw;
+  }
+  .footer__title {
+    font-size: 3.733vw;
+  }
+  .footer__menu-link {
+    font-size: 3.467vw;
+  }
+  .social__wrapper a {
+    margin-right: 17.333vw;
+  }
+  .social__wrapper a:last-child {
+    margin-right: 0;
+  }
+  .footer__content {
+    padding-bottom: 9.333vw;
+  }
+}

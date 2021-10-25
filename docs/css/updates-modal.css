@@ -1,0 +1,117 @@
+.updates {
+  padding: 20px 0;
+  background: -o-linear-gradient(359.95deg, #0B1294 -1.9%, #5A2CE3 101.04%, #79F7B0 101.04%);
+  background: linear-gradient(90.05deg, #0B1294 -1.9%, #5A2CE3 101.04%, #79F7B0 101.04%);
+  -webkit-box-shadow: 0px 4px 30px rgba(94, 44, 230, 0.3);
+          box-shadow: 0px 4px 30px rgba(94, 44, 230, 0.3);
+  text-align: center;
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  z-index: 99;
+}
+
+.updates .container-fluid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #7CEA57;
+  font-weight: 900;
+}
+
+.updates.hide {
+  display: none;
+}
+
+.updates__text {
+  position: relative;
+}
+
+.updates__text span {
+  text-align: center;
+}
+
+.updates__icon {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-100%);
+      -ms-transform: translateY(-50%) translateX(-100%);
+          transform: translateY(-50%) translateX(-100%);
+  left: -19px;
+}
+
+.updates__close {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 80px;
+  cursor: pointer;
+}
+
+.updates.active {
+  display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+  /**/
+  .updates__close {
+    right: 30px;
+  }
+  .updates {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /**/
+  .updates {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .updates__close {
+    width: 18px;
+    height: 18px;
+    right: 20px;
+    position: static;
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+    margin-left: 17px;
+  }
+  .updates__icon {
+    width: 19.6px;
+    position: static;
+    -webkit-transform: translate(0);
+        -ms-transform: translate(0);
+            transform: translate(0);
+    margin-right: 17px;
+  }
+  .updates__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  /**/
+  .updates {
+    font-size: 4.267vw;
+  }
+  .updates__icon {
+    width: 5.227vw;
+    margin-right: 2.667vw;
+  }
+  .updates__close {
+    width: 4.800vw;
+    margin-left: 2.667vw;
+  }
+}
