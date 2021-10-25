@@ -1,0 +1,95 @@
+@import "vars"
+
+//start shedule-demo style
+.call-to-action
+	position: relative
+
+	.call-to-action__content
+		background: linear-gradient(345.76deg, #5E2CE6 0%, #131DAA 52.39%, #0225EA 95.3%, #0A1193 119.69%)
+		border-radius: 40px
+		min-height: 387px 
+.call-to-action-wrapper
+	position: absolute
+	top: -260px 
+	left: 0 
+	width: 100%
+.call-to-action__content
+	position: relative
+	text-align: center
+	padding-top: 81px
+	display: flex
+	flex-direction: column
+	align-items: center
+.call-to-action__content:before
+	content: ''
+	position: absolute 
+	width: 365px 
+	height: 365px
+	top: -80px 
+	left: -32px
+	overflow: hidden
+	background: url('../img/call-to-action.svg') 
+	background-size: 100%
+	background-repeat: no-repeat
+.call-to-action__content:after 
+	content: ''
+	width: 196px
+	height: 196px
+	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
+	box-shadow: 0px 4px 20px rgba(128, 255, 159, 0.5)
+	display: block
+	border-radius: 50%
+	right: 57px
+	bottom: -80px
+	position: absolute
+.call-to-action__title
+	color: #fff
+	font-size: 50px
+	line-height: 1
+	width: 762px
+	max-width: 90%
+	margin-bottom: 78px
+	position: relative
+	z-index: 3
+.schedule-demo
+	background: transparent
+	border: 2px solid #56ccf2
+	min-width: 300px
+	color: #80FF9F
+	position: relative
+	z-index: 3
+
+.schedule-demo:hover
+	color: #80FF9F
+//end shedule-demo style
+
+@media only screen and (max-width : 992px)
+	/**/
+	.call-to-action .call-to-action__content
+		padding: 18.667vw 7vw 15.467vw 7vw
+	.call-to-action__title
+		max-width: 100%
+		margin-bottom: 9.333vw
+@media only screen and (max-width : 768px)
+	/**/
+	.call-to-action .call-to-action__content
+		min-height: auto
+	.call-to-action__title
+		text-align: left
+		font-size: 8.800vw
+	.schedule-demo
+		min-width: 52vw
+		width: 52vw
+	.call-to-action__content:before
+		width: 49.333vw
+		height: 49.333vw
+		top: -14.667vw
+		left: -10.667vw
+	.call-to-action__content:after
+		width: 22.400vw
+		height: 22.400vw
+		right: 6.400vw
+		bottom: 0
+		transform: translateY(50%)
+	.call-to-action-wrapper
+		top: -50vw

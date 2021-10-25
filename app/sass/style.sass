@@ -1,0 +1,196 @@
+@import "vars"
+
+//start global style
+body 
+	font-family: $main-font 
+	font-weight: 400
+	color: $text-color
+.container-fluid 
+	width: 1140px
+	max-width: 89vw
+	padding-right: 0
+	padding-left: 0
+ul 
+	list-style: none
+	padding: 0
+	margin: 0
+a,
+a:hover 
+	text-decoration: none
+p 
+	margin-bottom: 0
+.button 
+	background: $green-gradient
+	border-radius: 8px
+	font-size: 23px
+	color: #fff
+	cursor: pointer
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 76px
+	text-align: center
+.button:hover 
+	color: #fff
+.h1 
+	font-size: 78px
+	font-weight: 700
+	line-height: 1.2
+	margin-bottom: 14px
+.h2 
+	font-size: 60px
+	font-weight: 900
+	background: linear-gradient(84.14deg, #022AF0 3.89%, #5E2CE6 90.69%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	color: #022AF0
+	line-height: 1.2
+	margin-bottom: 0
+	span 
+		font-size: 60px
+.h5 
+	font-size: 33px
+	font-weight: 700
+	margin-bottom: 0
+	line-height: 121%
+.sub-title
+	font-size: 20px
+	letter-spacing: 0.1em
+	color: #0A843D
+	font-weight: 700
+	margin-bottom: 9px
+.item-heading
+	font-size: 40px
+	font-weight: 900
+	color: $title-color
+	margin-bottom: 25px
+	line-height: 120%
+.item-col__text
+	font-size: 19px
+	line-height: 158%
+	margin-bottom: 29px
+.item-row
+	.col-md-6 
+		display: flex
+		align-items: center
+.circle
+	width: 90px 
+	height: 90px
+	border-radius: 50%
+	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
+.circle-wrapper 
+	width: 100%
+	overflow: hidden
+.circle-wrapper--product-vision
+	display: flex 
+	justify-content: flex-end
+	margin-bottom: 34px
+	margin-bottom: 81px
+	.circle 
+		transform: translateX(50%)
+.circle-wrapper--left
+	display: flex 
+	justify-content: flex-start
+	.circle 
+		transform: translateX(-30%)
+.item-row__img
+	max-width: 100%	
+.item-row
+	.item-col
+		padding-right: 20px
+.item-row--reverse
+	.item-col
+		padding-left: 70px
+		padding-right: 0
+.items-section
+	padding-bottom: 153px
+.section-title
+	font-size: 50px
+	color: #fff
+	flex-wrap: 600
+.section-sub-title
+	font-size: 25px
+.center 
+	text-align: center
+
+
+	
+@media only screen and (max-width : 1250px)
+	/**/
+	.item-row--reverse .item-col
+		padding-left: 20px
+@media only screen and (max-width : 1150px)
+	/**/
+	.h5
+		font-size: 30px
+
+@media only screen and (max-width : 1100px)
+	/**/
+	.h1 
+		font-size: 48px
+	.button
+		font-size: 20px
+@media only screen and (max-width : 992px)
+	/**/
+	.circle-wrapper
+		display: none
+	.item-row
+		.col-lg-6:first-child
+			order: 2
+		.col-lg-6:nth-child(2)
+			order: 1
+			justify-content: center
+			display: flex
+	.item-row--reverse
+		.col-lg-6:first-child
+			order: 1
+			justify-content: center
+			display: flex
+		.col-lg-6:nth-child(2)
+			order: 2
+	.item-col
+		margin-top: 5.600vw
+		margin-bottom: 10.400vw
+	.item-row .item-col
+		padding-right: 0
+	.item-row--reverse .item-col
+		padding-left: 0
+
+
+
+@media only screen and (max-width : 768px)
+	/**/
+	
+
+@media only screen and (max-width : 575px)
+	/**/
+	.h1 
+		font-size: 12.800vw
+	.button 
+		font-size: 4vw
+		height: 17.067vw
+	.h5 
+		font-size: 6.400vw
+	.sub-title
+		font-size: 4vw
+		margin-bottom: 0
+	.item-heading
+		font-size: 7.467vw
+		margin-bottom: 4.800vw
+	.item-col__text
+		font-size: 4vw
+		margin-bottom: 5.867vw
+	.button 
+		span 
+			display: none
+	.section-title
+		font-size: 8.800vw
+		line-height: 1
+	.section-sub-title
+		font-size: 4.800vw
+		line-height: 128%
+//end global style
+
+
+
+

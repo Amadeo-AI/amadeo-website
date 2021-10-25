@@ -1,0 +1,323 @@
+@import "vars"
+
+
+//start desktop style
+
+//start header style
+.header 
+	z-index: 99
+	width: 100%
+	padding-top: 32px
+	font-size: 15px
+	position: relative
+
+	.container-fluid 
+		display: flex 
+		justify-content: space-between
+		align-items: center
+.logo 
+	img 
+		width: 144px
+.header__menu
+	display: flex
+	align-items: center
+	ul 
+		display: flex
+		align-items: center
+.header__menu-link,
+.header__menu-link:hover	
+	color: #fff
+	cursor: pointer
+
+.header__button
+	font-size: 15px
+	margin-left: 60px
+	padding: 8px 16px
+	height: 37px
+.header__menu-item
+	padding: 0 17px	
+	font-weight: 400
+.header__menu-item--bold
+	font-weight: 700
+	border-right: 1px solid $secondary-color
+.header__menu-item--sub-wrap
+	display: none
+//end header style
+
+//start dropdown style
+
+.dropdown__menu-wrapper	
+	width: 1100px
+	max-width: 100%
+	background: #fff
+	border-radius: 5px			
+.dropdown__menu
+	position: absolute
+	//display: none
+	padding-top: 40px
+	top: 80%
+	left: 50%
+	z-index: 999
+	transform: translateX(-50%)
+	visibility: hidden
+	transition: visibility 0s linear 0.5s,opacity 0.5s linear
+	opacity: 1
+	transition-delay: 0.5s
+	max-width: 98vw
+
+
+.header__menu-item--platform:hover .dropdown__menu
+	visibility: visible
+	opacity: 1
+	transition-delay: 0.1s
+.dropdown__menu:hover .dropdown__menu
+	visibility: visible
+	opacity: 1
+	transition-delay: 0.1s
+.dropdown__menu-item 
+	padding-top: 60px 
+	padding-bottom: 45px
+	min-height: 100%
+.dropdown__menu-row
+	display: flex
+	min-height: 100%
+	min-height: 457px
+.dropdown__menu-item--overview
+	background: url('../img/menu-vector.png') no-repeat bottom -10px right -10px, linear-gradient(332.45deg, #5E2CE6 0%, #131DAA 48.36%, #0A1193 64.03%, #0A1193 83.25%)
+	width: 327px 
+	border-top-left-radius: 5px
+	border-bottom-left-radius: 5px
+	padding-left: 57px 
+	padding-right: 39px
+	color: #fff
+	display: block
+.dropdown__menu-item--overview:hover 
+	color: #fff
+.dropdown__menu-title 
+	font-size: 22px
+	font-weight: 900
+	color: $main-color
+	margin-bottom: 34px
+.dropdown__menu-title--green
+	color: $secondary-color
+.overview-icon
+	margin-bottom: 25px
+	display: block
+.overwiew__sub-title
+	font-size: 20px
+	color: $secondary-color
+	margin-bottom: 10px
+.overwiew__text
+	margin-top: 10px 
+	margin-bottom: 0
+	font-size: 17px
+.dropdown__menu-item--components
+	padding-left: 38px
+	
+	width: 355px
+.dropdown__menu-item-content
+	width: 100%
+	padding-right: 10px
+	border-right: 0.5px solid $main-color
+.components__item-title
+	font-size: 18px
+	font-weight: 600
+	color: rgba(0, 0, 0, 0.9)
+	margin-bottom: 12px	
+.components__item-text
+	font-size: 15px
+	color: rgba(0, 0, 0, 0.8)
+	width: 230px
+	max-width: 100%
+	display: block
+.components__item
+	margin-bottom: 38px
+	display: block
+.components__item:last-child 
+	margin-bottom: 0
+.comming-soon
+	font-size: 14px
+	color: #17D23B
+	font-weight: 600
+	margin-left: 9px
+.dropdown__menu-item--integrations
+	padding-left: 29px
+	width: 418px
+.integrations__row
+	display: flex
+	width: 100%
+.integrations__col
+	width: 50%
+.integrations__item
+	display: flex
+	align-items: flex-start
+	margin-bottom: 27px
+.integrations__item-title
+	margin-left: 17px
+	line-height: 1.2
+	font-size: 18px
+	font-weight: 600
+.integrations__row--first
+	padding-bottom: 9px
+.integrations__link
+	color: $main-color
+	font-size: 18px 
+	font-weight: 600
+	display: flex
+	align-items: center
+	margin-top: 20px
+	img 
+		display: block 
+		margin-left: 6px
+.integrations__link:hover
+	color: $main-color
+//end dropdown style
+
+//end desktop style
+
+//start media 
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1100px)
+	/**/
+	.header__button 
+		margin-left: 20px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.header__menu
+		transition: background-color 0.5s
+		display: none
+	.menu-btn
+		cursor: pointer
+	.menu-row 
+		width: 30px 
+		height: 3px
+		transition: all 0.3s
+		border-radius: 15px
+		background: #fff
+		margin-bottom: 3px
+	.menu-row:last-child 
+		margin-bottom: 0
+	.menu-btn.active
+		.menu-row
+			height: 1px 
+		.menu-row:last-child 
+			display: none
+		.menu-row:first-child 
+			transform: rotate(45deg)
+		.menu-row:nth-child(2) 
+			transform: rotate(-45deg)
+			position: relative 
+			top: -3px
+	.header.active
+		.container-fluid 
+			justify-content: center
+		.menu-btn
+			position: absolute 
+			right: 5.5vw
+			bottom: 0
+			z-index: 999
+		.logo
+			z-index: 999
+		.header__menu
+			
+			display: block
+			background: #5E2CE6
+			position: absolute
+			width: 100vw
+			left: 0
+			top: 0
+			min-height: 100vh
+			padding-top: 100px
+			transition: background-color 0.5s
+			ul 
+				flex-direction: column
+				align-items: center
+
+
+		.header__button 
+			display: none
+	.dropdown__menu 
+		display: none
+	.header__menu-item--bold
+		border-right: none
+	.header__menu-item
+		font-size: 20px
+		padding: 12px 
+		border-bottom: 1px solid #fff
+		width: 92vw
+		font-weight: 400
+	.header__menu-item:last-child 
+		border-bottom: 0
+	.header__menu-item--platform
+		.header__menu-link
+			position: relative
+		.header__menu-link:after
+			content: url('../img/down.svg')
+			margin-left: 15px
+	.header__menu-item--platform.active
+		.header__menu-link:after
+			content: url('../img/up.svg')
+	.header__menu-sub-item
+		display: block
+		font-size: 18px
+		color: #fff
+		padding: 12px 34px
+	.header__menu-sub-item:hover 
+		color: #fff
+	.header__menu-item--platform.active
+		.header__menu-item--sub-wrap 
+			display: block
+
+
+
+
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 575px)
+	/**/
+	.menu-row 
+		width: 8vw 
+		height: 0.800vw
+		border-radius: 10vw
+		background: #fff
+		margin-bottom: 0.800vw
+	.logo img
+		width: 26.667vw
+	.menu-btn.active
+		.menu-row
+			height: 0.267vw
+			width: 5.333vw
+		.menu-row:nth-child(2)
+			top: -1.1vw
+	.header
+		padding-top: 9.067vw
+	.header.active
+		.container-fluid 
+			justify-content: center
+		.menu-btn
+			position: absolute 
+			right: 5.5vw
+			bottom: 0
+			//transform: translateY(-50%)
+		.header__menu
+			display: block
+			background: #5E2CE6
+			width: 100vw
+			position: absolute
+			left: 0
+			top: 0
+			min-height: 100vh
+			padding-top: 27.733vw
+	.header__menu-item
+		font-size: 5.333vw
+		padding: 3.2vw 0
+	.header__menu-sub-item
+		font-size: 4.800vw
+		padding: 3.2vw 9.067vw
+//end media
+
