@@ -20,6 +20,7 @@
 
 .logo img {
   width: 144px;
+  height: auto;
 }
 
 .header__menu {
@@ -154,6 +155,7 @@
 .overview-icon {
   margin-bottom: 25px;
   display: block;
+  height: auto;
 }
 
 .overwiew__sub-title {
@@ -236,6 +238,10 @@
   margin-bottom: 27px;
 }
 
+.integrations__item img {
+  height: auto;
+}
+
 .integrations__item-title {
   margin-left: 17px;
   line-height: 1.2;
@@ -263,6 +269,7 @@
 .integrations__link img {
   display: block;
   margin-left: 6px;
+  height: auto;
 }
 
 .integrations__link:hover {

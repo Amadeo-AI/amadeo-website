@@ -158,6 +158,7 @@ p {
 
 .item-row__img {
   max-width: 100%;
+  height: auto;
 }
 
 .item-row .item-col {
