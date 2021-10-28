@@ -4,8 +4,8 @@
 }
 
 .page-main-screen--integrations {
-  background: url("../img/integrations/i3.svg") no-repeat right 0 bottom 0, url("../img/integrations/i1.svg") no-repeat left 0 top 0, url("../img/integrations/i2.svg") no-repeat right 0 bottom 0, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
-  background: url("../img/integrations/i3.svg") no-repeat right 0 bottom 0, url("../img/integrations/i1.svg") no-repeat left 0 top 0, url("../img/integrations/i2.svg") no-repeat right 0 bottom 0, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+  background: url("../img/integrations/i3.svg") no-repeat right 0 bottom -60px, url("../img/integrations/i1.svg") no-repeat left 0 top 0, url("../img/integrations/i2.svg") no-repeat right 0 bottom 0, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+  background: url("../img/integrations/i3.svg") no-repeat right 0 bottom -60px, url("../img/integrations/i1.svg") no-repeat left 0 top 0, url("../img/integrations/i2.svg") no-repeat right 0 bottom 0, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
 }
 
 .all-integrations {
