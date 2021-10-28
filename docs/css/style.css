@@ -12,9 +12,7 @@ body {
 }
 
 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  margin-bottom: 0;
 }
 
 a,
@@ -176,9 +174,8 @@ p {
 
 .section-title {
   font-size: 50px;
-  color: #fff;
-  -ms-flex-wrap: 600;
-      flex-wrap: 600;
+  font-weight: 600;
+  color: #041153;
 }
 
 .section-sub-title {
@@ -187,6 +184,78 @@ p {
 
 .center {
   text-align: center;
+}
+
+/*start page main screen style*/
+.page-main-screen {
+  position: relative;
+  background: -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+  background: linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+  min-height: 645px;
+}
+
+.page-main-screen__content {
+  color: #fff;
+  text-align: center;
+  padding-top: 125px;
+}
+
+.page-main-screen__content .button {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.page-main-screen__title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 37px;
+}
+
+.page-main-screen__content-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.page-main-screen__text {
+  font-size: 18px;
+}
+
+.button--lg {
+  width: 556px;
+  max-width: 100%;
+}
+
+.button--transparent {
+  background: transparent;
+  border: 2px solid #56ccf2;
+  color: #80FF9F;
+}
+
+.button--transparent:hover {
+  color: #80FF9F;
+}
+
+.button--sm {
+  width: 265px;
+  max-width: 100%;
+}
+
+/*end page main screen style*/
+.section-header {
+  text-align: center;
+}
+
+.section-header .section-title {
+  margin-bottom: 30px;
+}
+
+.section-text {
+  font-size: 20px;
+  line-height: 1.5;
+  width: 934px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 1250px) {
@@ -264,6 +333,9 @@ p {
 
 @media only screen and (max-width: 768px) {
   /**/
+  .page-main-screen .page-main-screen__content {
+    padding-top: 17.067vw;
+  }
 }
 
 @media only screen and (max-width: 575px) {
@@ -300,5 +372,34 @@ p {
   .section-sub-title {
     font-size: 4.800vw;
     line-height: 128%;
+  }
+  .page-main-screen__title {
+    font-size: 8.800vw;
+    font-weight: 600;
+    margin-bottom: 9.867vw;
+  }
+  .page-main-screen__content {
+    text-align: left;
+  }
+  .page-main-screen__text {
+    font-size: 3.733vw;
+  }
+  .page-main-screen__content .button {
+    margin-top: 8.267vw;
+  }
+  .section-header .section-title {
+    margin-bottom: 6.933vw;
+  }
+  .section-text {
+    font-size: 4.533vw;
+  }
+  .button--sm {
+    width: 100%;
+  }
+  .page-main-screen {
+    min-height: auto;
+  }
+  .page-main-screen {
+    padding-bottom: 13.333vw;
   }
 }
