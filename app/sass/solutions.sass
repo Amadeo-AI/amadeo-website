@@ -1,10 +1,15 @@
 @import "vars"
 
 .page-main-screen--solutions
-	background: linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
+	background: url('../img/solutions/bg2.svg') no-repeat bottom -70px right -68px, url('../img/solutions/bg1.svg') no-repeat top -33px left -117px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
+	.page-main-screen__content .button 
+		width: 416px
+		max-width: 100%
 
 
-@media only screen and (max-width : 575px)
+@media only screen and (max-width : 768px)
 	/**/
+	.page-main-screen--solutions
+		background: url('../img/solutions/bg1.svg') no-repeat top -1.867vw left -54.667vw / 157.067vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
 
 
