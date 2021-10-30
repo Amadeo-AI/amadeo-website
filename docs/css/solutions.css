@@ -118,7 +118,7 @@
 }
 
 .solutions {
-  padding-bottom: 67px;
+  padding-bottom: 120px;
 }
 
 .solutions .tabs__pane {
@@ -372,6 +372,12 @@
     height: 9.067vw;
     border-radius: 4vw;
     padding: 0 4.267vw;
+  }
+  .solutions {
+    padding-bottom: 5vw;
+  }
+  .call-to-action__background {
+    height: 90vw;
   }
 }
 
