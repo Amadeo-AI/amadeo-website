@@ -10,6 +10,95 @@
 	position: absolute 
 	top: 63px 
 	left: 0
+//start block section style
+.block-section--technology
+	padding-top: 112px
+	padding-bottom: 200px
+	background: url('../img/technology.svg')
+	position: relative
+	.h5 
+		min-height: 80px
+
+.block
+	width: 100% 
+	min-height: 498px
+	background: url('../img/vector.png') no-repeat bottom -12px right -12px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%) 
+	border-radius: 20px
+	color: #fff
+	padding: 65px 40px 20px 48px
+	.h5 
+		width: 240px
+		max-width: 100%
+.block-img
+	height: 125px
+.block-text
+	font-size: 18px
+	margin-top: 16px
+
+.block__circle
+	width: 90px 
+	height: 90px
+	border-radius: 50%
+	position: relative 
+	top: -15px
+	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
+.block-img
+	img 
+		height: auto
+//end block section style
+
+//start technology style
+.technology
+	.items-section 
+		padding-bottom: 0
+	.section-title
+		margin-bottom: 90px
+		color: $main-color
+	.item-row--reverse .item-col
+		padding-left: 60px
+	.item-row
+		margin-bottom: 130px
+//end technology style
+.graph 
+	padding-bottom: 110px
+	.section-title
+		color: $main-color
+.graph-img
+	margin: 0 auto 
+	margin-top: 70px
+	height: auto
+	max-width: 100%
+
+@media only screen and (max-width : 1150px)
+	/**/
+	.block
+		padding-left: 40px 
+		padding-right: 15px
+@media only screen and (max-width : 992px)
+	/**/
+	.block
+		margin-bottom: 2.667vw
+		min-height: auto
+		padding-bottom: 65px
+		padding-right: 60px
+		.h5 
+			width: auto
+			br 
+				display: none
+	.block-section--technology
+		background: transparent
+	.block-section--technology
+		.h5 
+			min-height: auto
+	.block-section--technology
+		padding-bottom: 11.733vw
+	.technology .section-title
+		margin-bottom: 9.867vw
+	.technology .item-row
+		margin-bottom: 0
+	.technology .item-row--reverse .item-col
+		padding-left: 0
+
 
 @media only screen and (max-width : 768px)
 	/**/
@@ -26,7 +115,31 @@
 		min-height: auto
 		padding-bottom: 15.200vw
 		background:  url('../img/union.svg') no-repeat top -57.867vw left 2vw/ 88.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
-	
-	
+	.graph
+		padding-bottom: 0
+	.graph-img
+		margin-top: 10vw
+@media only screen and (max-width : 575px)
+	/**/	
+	.block 
+		padding: 12.800vw 10.667vw 13.333vw 11.467vw
+	.block-text
+		font-size: 4.800vw
+		margin-top: 4vw
+	.block-img
+		height: 29.600vw
+		img 
+			max-width: 26.400vw
+	.block
+		min-height: 98.133vw
+		background: url('../img/vector.png')  no-repeat bottom -10vw right -2vw / 20.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%)
+	.block-section--technology
+		padding-top: 10.400vw
+		padding-bottom: 11.733vw
+	.graph
+		display: none
+	.technology 
+		.item-col 
+			//margin-bottom: 0
 
 

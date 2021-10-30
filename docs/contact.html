@@ -10,6 +10,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
 	<link rel="stylesheet" href="css/bootstrap-grid.css">
 	<link rel="stylesheet" href="css/bootstrap-reboot.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
@@ -224,30 +225,98 @@ main features, and benefits</p>
 </section>
 <!-- end page main-screen section -->
 
+<!-- start contact page -->
+<section class="contact-page">
+	<div class="container-fluid">
+		<div class="section-title">
+			Give us your details here
+		</div>
 
+		<div class="row">
+			<div class="col-lg-7">
+				<div class="form-wrapper">
+					<form action="" class="form">
+					<!-- add class "input-wrapper--error"  to input-wrapper for requare input -->
+						<div class="input-wrapper">
+							<input type="text" class="input input--name" placeholder="Full name" required="">
 
+						</div>
+						<div class="input-wrapper">
+							<input type="text" class="input input--email" placeholder="Business email" required="">
+						</div>
 
-<!-- start call to action -->
-<div class="call-to-action__background"></div>
-<section class="call-to-action call-to-action--page">
+						<div class="input-wrapper">
+							<input type="text" class="input input--phone" placeholder="Mobile number" required="">
+						</div>
+						
 
-	<div class="call-to-action-wrapper">
-		<div class="container-fluid">
-		<div class="call-to-action__content">
-			<h2 class="call-to-action__title">
-				Run on your data & documentation more completely, more accurately
-			</h2>
-			<div class="call-to-action__text">
-				Amadeo address the challenge of company's unstructured documentation and data overload, giving you an all-round product vision and ensuring you never miss a thing.
+						
+<div class="input-wrapper">
+	<input type="text" class="input input--job" placeholder="Job title" required="">
+</div>
+						
+<div class="input-wrapper">
+<input type="text" class="input input--company" placeholder="Company name" required="">	
+</div>
+						
+<div class="input-wrapper">
+	<select name="" id="" class="select form-select" required="">
+							<option value="">Banking</option>
+							<option value="">Industry</option>						
+							<option value="">NBFC</option>
+							<option value="">Costumer Durables</option>
+							<option value="">Travel & Hospitality</option>
+							<option value="">Telecom</option>
+							<option value="">Energy</option>
+						</select>
+</div>
+						<div class="input-wrapper">
+							<textarea class="textarea" name="" id="" cols="30" rows="10" placeholder="Tell more about your case (optional)"></textarea>
+						</div>
+						
+
+						<div class="form-text">
+							By clicking on ‘Submit’, I acknowledge receipt of the Amadeo
+						</div>
+						<input type="submit" value="SUBMIT" class="button">
+					</form>
+				</div>
 			</div>
-			<a href="" class="button button--transparent schedule-demo">
-				SCHEDULE A DEMO
-			</a>
+
+			<div class="col-lg-5">
+				<h5 class="h5">
+					Our contacts
+				</h5>
+
+				<a href="tel:+380 66 9184600" class="contact-page__item">
+					<span class="contact-page__icon">
+						<img src="img/contact/ic_phone_1.svg" alt="phone icon" width="28" height="28" />
+					</span>
+					+380 66 9184600
+				</a>
+				<a href="mailto:contact.us@amadeo.tech" class="contact-page__item">
+					<span class="contact-page__icon">
+						<img src="img/contact/ic_email_2.svg" alt="email icon" width="28" height="28" />
+
+					</span>
+					contact.us@amadeo.tech
+				</a>
+				<div class="contact-page__item">
+					<span class="contact-page__icon">
+						<img src="img/contact/ic_loc.svg" alt="email icon" width="20" height="30" />
+					</span>
+					Middletown, Delaware, United States
+				</div>
+
+				<img src="img/contact/a.png" alt="background" class="contact-bg" width="442" height="509">
+			</div>
+
 		</div>
 	</div>
-	</div>	
 </section>
-<!-- end call to action -->
+<!-- end contact page -->
+
+
 
 <!-- start footer  -->
 <footer class="footer">
@@ -343,6 +412,6 @@ main features, and benefits</p>
 
 
 <script src="js/main.js"></script>
-<script src="js/tabs.js"></script>
+
 </body>
 </html>

@@ -8,16 +8,261 @@
 	min-height: 557px
 	background: url('../img/contact/i3.svg') no-repeat right 0 bottom -75px, url('../img/contact/i1.svg') no-repeat left 0 top 0,  url('../img/contact/i2.svg') no-repeat right 0 bottom 0,  linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
 
+.contact-page 
+	padding-top: 120px
+	
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 24.19%, rgba(255, 255, 255, 0.19) 24.2%, rgba(94, 44, 230, 0.66) 96.84%) 
+	background-size: 100% 372px
+	background-position: bottom center
+	background-repeat: no-repeat
+	.container-fluid
+		position: relative
+		padding-bottom: 116px
+	.container-fluid:after 
+		content: ''
+		position: absolute 
+		display: block 
+		bottom: 0
+		left: 0
+		width: 91px 
+		height: 91px 
+		border-radius: 50%
+		transform: translateY(50%)
+		background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
+		box-shadow: 0px 4px 20px 2px rgba(128, 255, 159, 0.5)
+	.section-title 
+		color: $main-color		
+		padding-bottom: 56px
+.contact-page
+	.h5 
+		color: $main-color
+.contact-page__item
+	display: flex
+	align-items: center
+	margin-top: 25px
+	color: rgba(0, 0, 0, 0.8)
+.contact-page__item:hover 
+	color: rgba(0, 0, 0, 0.8)
 
+.contact-page__icon
+	min-width: 28px
+	display: flex 
+	align-items: center 
+	justify-content: center
+	margin-right: 27px
+.form-wrapper
+	width: 654px 
+	max-width: 100%
+	border: 1px solid rgba(94, 44, 230, 0.1)
+	box-sizing: border-box
+	box-shadow: 10px 10px 24px 10px rgba(94, 44, 230, 0.1)
+	border-radius: 10px
+	background: #fff
+	padding: 89px 98px 49px 98px
+.form 
+	width: 100%
+.input,
+.select,
+.textarea 
+	width: 100%
+	background-color: rgba(196, 196, 196, 0.1)
+	border: 1px solid rgba(94, 44, 230, 0.1)
+	box-sizing: border-box
+	border-radius: 10px
+	height: 50px
+	padding-left: 79px 
+	padding-right: 10px
+	font-size: 16px
+	color: rgba(0, 0, 0, 0.8)
+	background-repeat: no-repeat
+	background-position: left 31px center
+	outline: none
+	 
+.input:focus::placeholder,
+.select:focus::placeholder,
+.textarea:focus::placeholder
+	color: transparent
+.input--name 
+	background-image: url('../img/contact/ic_name.svg')
+.input--name:focus,
+.input--name:valid
+	background-image: url('../img/contact/ic_name_1.svg')
+
+.input--email 
+	background-image: url('../img/contact/ic_email.svg')
+.input--email:focus,
+.input--email:valid
+	background-image: url('../img/contact/ic_email_1.svg')
+
+.input--phone 
+	background-image: url('../img/contact/ic_phone.svg')
+.input--phone:focus,
+.input--phone:valid 
+	background-image: url('../img/contact/ic_phone_2.svg')
+
+.input--job 
+	background-image: url('../img/contact/ic_job.svg')
+.input--job:focus,
+.input--job:valid
+	background-image: url('../img/contact/ic_job_1.svg')
+
+.input--company 
+	background-image: url('../img/contact/ic_company.svg')
+.input--company:focus,
+.input--company:valid
+	background-image: url('../img/contact/ic_company_1.svg')
+.input::placeholder,
+.textarea::placeholder
+	color: #A2A2A4
+.select 
+	background: url('../img/contact/arrow.svg') no-repeat right 20px top 50%, url('../img/contact/ic_name.svg') no-repeat left 31px center
+	background-color: rgba(196, 196, 196, 0.1)
+	appearance: none
+	color: #A2A2A4
+
+	option 
+		background: #FFFFFF
+		border: 1px solid rgba(94, 44, 230, 0.1)
+		border-radius: 10px
+		color: #A2A2A4
+
+
+.select:focus
+	background: url('../img/contact/up.svg') no-repeat right 20px top 50%, url('../img/contact/ic_name_1.svg') no-repeat left 31px center
+	color: rgba(0, 0, 0, 0.8)
+	background-color: rgba(196, 196, 196, 0.1)
+.select:valid
+	background: url('../img/contact/arrow.svg') no-repeat right 20px top 50%, url('../img/contact/ic_name_1.svg') no-repeat left 31px center
+	color: rgba(0, 0, 0, 0.8)
+	background-color: rgba(196, 196, 196, 0.1)
+.textarea
+	padding-top: 16px 
+	height: 137px
+	background-image: url('../img/contact/ic_tell.svg')
+	background-position: top 19px left 31px
+.textarea:focus
+	background-image: url('../img/contact/ic_tell_2.svg')
+.form-text
+	font-size: 16px
+	width: 356px 
+	max-width: 100%
+	margin-bottom: 84px
+.form 
+	.button 
+		width: 100%
+		outline: none
+		border: none
+.input-wrapper
+	margin-bottom: 27px
+
+.input-wrapper--error
+	.input 
+		border: 1px solid rgba(230, 89, 44, 0.4)
+.input-wrapper--error
+	position: relative 
+.input-wrapper--error:before 
+	content: 'Required'	
+	position: absolute 
+	top: 50%
+	transform: translateY(-50%)
+	right: 15px
+	color: #E6592C
+.contact-bg 
+	
+	display: block 
+	margin: 0 auto
+	max-width: 100%
+	margin-top: 100px
+	height: auto
+.contact-page 
+	.col-lg-5 
+		padding-left: 30px
+
+@media only screen and (max-width : 992px)
+	.contact-bg
+		display: none
+	.form-wrapper
+		width: 100%
+		margin-bottom: 10.133vw
+	.footer 
+		padding-top: 12vw
+		
 @media only screen and (max-width : 768px)
 	/**/
+	.form-wrapper
+		padding: 12.533vw 6.667vw 13.867vw 6.667vw
 	.page-main-screen--contact
 		min-height: auto
 		background: url('../img/integrations/i4.svg') no-repeat top 0 left 32.533vw / 40.533vw, url('../img/contact/i2.svg') no-repeat right 0 bottom 0/92vw,  linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
+
+	.contact-page .section-title
+		text-align: center
+		padding-bottom: 4.800vw
+	.contact-page
+		padding-top: 9.600vw
+	.input-wrapper
+		margin-bottom: 2.667vw
+	.form-text
+		margin-bottom: 5.600vw
 	
 
 @media only screen and (max-width : 575px)
 	/**/
+	.form-text
+		font-size: 3.467vw
+		width: 64vw
+	.input,
+	.select
+		height: 9.333vw
+	.textarea 
+		height: 29.600vw
+	.input
+		background-position: left 3.467vw center
+		background-size: 3.200vw
+	.textarea
+		background-position: left 3.467vw top 4vw
+		background-size: 3.200vw
+		padding-top: 1.8vw
+	.input,
+	.select,
+	.textarea
+		padding-left: 9.867vw
+		font-size: 3.733vw
+	.contact-page .section-title
+		width: 74.667vw
+		margin-left: auto
+		margin-right: auto
+
+	.select 
+		background: url('../img/contact/arrow.svg') no-repeat right 3vw top 50% / 3.2vw, url('../img/contact/ic_name.svg') no-repeat left 3.467vw center / 3.2vw
+		background-color: rgba(196, 196, 196, 0.1)
+	.select:focus
+		background: url('../img/contact/up.svg') no-repeat right 3vw top 50% / 3.2vw, url('../img/contact/ic_name_1.svg') no-repeat left 3.467vw center / 3.2vw
+		background-color: rgba(196, 196, 196, 0.1)
+	.select:valid
+		background: url('../img/contact/arrow.svg') no-repeat right 3vw top 50% / 3.2vw, url('../img/contact/ic_name_1.svg') no-repeat left 3.467vw center / 3.2vw
+		background-color: rgba(196, 196, 196, 0.1)
+	.form .button
+		height: 12.800vw
+	.contact-page__item
+		font-size: 4vw
+		margin-top: 3.200vw
+	.contact-page__icon
+		margin-right: 2.933vw
+		min-width: 5.333vw
+
+		img 
+			width: 5.333vw
+			height: auto
+	.contact-page
+		background-size: 100% 29.333vw
+	.contact-page .container-fluid
+		padding-bottom: 20vw
+	.contact-page .container-fluid:after
+		display: none
+
+
+
 	
 
 
