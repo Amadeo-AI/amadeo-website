@@ -3,618 +3,659 @@
 
 //start main-screen style
 .main-screen
-	background:  url('../img/gradient-blue.png'), url('../img/main-screen-img.png')
-	background-size: cover
-	background-position: center
-	background-repeat: no-repeat
-	min-height: 960px
-	position: relative
-	//overflow: hidden
+  background: url('../img/gradient-blue.png'), url('../img/main-screen-img.png')
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  min-height: 960px
+  position: relative
+//overflow: hidden
 
 .main-screen__video
-	position: absolute
-	overflow: hidden
-	z-index: 1
-	top: 0
-	left: 0
-	width: 100%
-	height: 100%
+  position: absolute
+  overflow: hidden
+  z-index: 1
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+
 .main-screen__video-item
-	width: 100%
+  width: 100%
+
 .main-screen__video:before
-	content: ''
-	position: absolute
-	width: 100%
-	height: 100%
-	top: 0
-	left: 0
-	background: url('../img/gradient-blue.png')
-	background-size: cover
-	background-repeat: no-repeat
-	z-index: 1
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  background: url('../img/gradient-blue.png')
+  background-size: cover
+  background-repeat: no-repeat
+  z-index: 1
+
 .main-screen__before
-	width: 937px
-	transform: translateX(50px) translateY(-120px)
-	height: auto
+  width: 937px
+  transform: translateX(50px) translateY(-120px)
+  height: auto
 
-	
+
 .main-screen__before-wrapper
-	overflow: hidden
-	position: absolute
-	top: 0 
-	right: 0
-.main-screen__text-wrapper
-	color: #fff
+  overflow: hidden
+  position: absolute
+  top: 0
+  right: 0
 
-	
+.main-screen__text-wrapper
+  color: #fff
+
+
 .main-screen__text
-	font-size: 28px 
-	flex-wrap: 600
-	width: 512px
-	line-height: 1.2	
+  font-size: 28px
+  flex-wrap: 600
+  width: 512px
+  line-height: 1.2
+
 .main-screen__content
-	padding-top: 243px
-	padding-bottom: 182px
-	position: relative
-	z-index: 2
+  padding-top: 243px
+  padding-bottom: 182px
+  position: relative
+  z-index: 2
+
 .main-screen__video-wrapper
-	display: flex
-	justify-content: center
-	align-items: center	
-	height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
+
 .video-btn
-	cursor: pointer
-	height: auto
+  cursor: pointer
+  height: auto
 //end main-screen style
 
 //start video modal style
-.video-modal 
-	background-color: rgba(0,0,0,.8)
-	position: fixed 
-	top: 0 
-	left: 0 
-	width: 100%
-	height: 100%
-	z-index: 9999
-	display: none
-.video-modal.active 
-	display: block	
+.video-modal
+  background-color: rgba(0, 0, 0, .8)
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  display: none
+
+.video-modal.active
+  display: block
+
 .video-modal__content
-	position: absolute 
-	top: 50%
-	left: 50%
-	width: 900px
-	max-width: 90vw
-	height: 506px
-	transform: translateY(-50%) translateX(-50%)
-	iframe
-		width: 100% 
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 900px
+  max-width: 90vw
+  height: 506px
+  transform: translateY(-50%) translateX(-50%)
+
+  iframe
+    width: 100%
+
 .close-modal
-	cursor: pointer
-	position: absolute
-	top: 25px
-	right: 25px
-	z-index: 9
-	height: auto
+  cursor: pointer
+  position: absolute
+  top: 25px
+  right: 25px
+  z-index: 9
+  height: auto
 
 //end video modal style
 
 //start logos slider style
 .slider-wrapper
-	color: #fff
+  color: #fff
 
-	.container-fluid
-		padding-top: 76px
-		padding-bottom: 83px
-		position: relative
-		//border-top: 1px solid #E5E5E5
-	.container-fluid:before 
-		content: ""
-		width: 82%
-		height: 1px 
-		background: #E5E5E5
-		display: block
-		position: absolute 
-		top: 0
-		left: 50%
-		transform: translateX(-50%)
+  .container-fluid
+    padding-top: 76px
+    padding-bottom: 83px
+    position: relative
+  //border-top: 1px solid #E5E5E5
+  .container-fluid:before
+    content: ""
+    width: 82%
+    height: 1px
+    background: #E5E5E5
+    display: block
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+
 .swiper__logo-item
-	width: 100%
-	display: flex
-	justify-content: center
-	img 
-		height: auto
+  width: 100%
+  display: flex
+  justify-content: center
+
+  img
+    height: auto
+
 .slider-wrapper--logos
-	.container-fluid 
-		width: 1400px
-		max-width: 89vw
+  .container-fluid
+    width: 1400px
+    max-width: 89vw
 //end logos slider style
 
 //start meet style
-.meet 
-	padding-top: 49px
-	padding-bottom: 130px
-	padding-top: 125px
-	overflow: hidden
+.meet
+  padding-bottom: 130px
+  padding-top: 125px
+  overflow: hidden
 
-	background: linear-gradient(180deg, rgba(128, 255, 159, 0.1829) 0%, rgba(255, 255, 255, 0) 214.47%) 
+  background: linear-gradient(180deg, rgba(128, 255, 159, 0.1829) 0%, rgba(255, 255, 255, 0) 214.47%)
+
 .item
-	.button 
-		width: 100%
-		margin-top: 45px
+  .button
+    width: 100%
+    margin-top: 45px
+
 .item-text
-	font-size: 25px
-	line-height: 1.5
+  font-size: 25px
+  line-height: 1.5
+
 .meet__title-wrapper
-	width: 100%
-	height: 100%
-	background: url('../img/meet-bg.png')
-	background-repeat: no-repeat
-	background-position: top left
-	height: 430px
-	top: -70px
-	left: -40px
-	position: relative
-	.h2 
-		padding-top: 137px
-		padding-left: 137px
+  width: 100%
+  height: 100%
+  background: url('../img/meet-bg.png')
+  background-repeat: no-repeat
+  background-position: top left
+  height: 430px
+  top: -70px
+  left: -40px
+  position: relative
+
+  .h2
+    padding-top: 137px
+    padding-left: 137px
 
 //end meet style
 
 //start block section style
 .block-section
-	position: relative 
-	top: -68px
+  position: relative
+  top: -68px
+
 .block
-	width: 100% 
-	min-height: 498px
-	background: url('../img/vector.png') no-repeat bottom -12px right -12px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%) 
-	border-radius: 20px
-	color: #fff
-	padding: 65px 40px 20px 48px
-	.h5 
-		width: 240px
-		max-width: 100%
+  width: 100%
+  min-height: 498px
+  background: url('../img/vector.png') no-repeat bottom -12px right -12px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%)
+  border-radius: 20px
+  color: #fff
+  padding: 65px 40px 20px 48px
+
+  .h5
+    width: 240px
+    max-width: 100%
+
 .block-img
-	height: 125px
+  height: 125px
+
 .block-text
-	font-size: 18px
-	margin-top: 16px
+  font-size: 18px
+  margin-top: 16px
 
 .block__circle
-	width: 90px 
-	height: 90px
-	border-radius: 50%
-	position: relative 
-	top: -15px
-	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
+  width: 90px
+  height: 90px
+  border-radius: 50%
+  position: relative
+  top: -15px
+  background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
+
 .block-img
-	img 
-		height: auto
+  img
+    height: auto
 //end block section style
 
 //start items section style
 .items-section
-	padding-top: 66px
+  padding-top: 66px
 //end items section style
 
 //strat smart solution style
 .smart-solution
-	background: url('../img/ss1.svg') no-repeat top 52px left -200px / 43.333vw, url('../img/ss2.svg') no-repeat bottom -70px right -100px / 43.333vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
-	padding-top: 98px
-	padding-bottom: 60px
-	.section-title
-		margin-bottom: 10px
-		color: #fff
-	.section-sub-title 
-		color: $secondary-color
-		margin-bottom: 73px
+  background: url('../img/ss1.svg') no-repeat top 52px left -200px / 43.333vw, url('../img/ss2.svg') no-repeat bottom -70px right -100px / 43.333vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
+  padding-top: 98px
+  padding-bottom: 60px
+
+  .section-title
+    margin-bottom: 10px
+    color: #fff
+
+  .section-sub-title
+    color: $secondary-color
+    margin-bottom: 73px
+
 .swiper-item
-	background-color: #fff
-	background-image: url('../img/vector3.png')
-	background-repeat: no-repeat
-	background-position: bottom -12px right -12px
-	min-height: 527px
-	border-radius: 20px
-	padding: 71px 35px 20px 48px
-	.h5 
-		color: $main-color
-		margin-bottom: 16px
-		min-height: 70px
+  background-color: #fff
+  background-image: url('../img/vector3.png')
+  background-repeat: no-repeat
+  background-position: bottom -12px right -12px
+  min-height: 527px
+  border-radius: 20px
+  padding: 71px 35px 20px 48px
+
+  .h5
+    color: $main-color
+    margin-bottom: 16px
+    min-height: 70px
+
 .swiper-slide
-	padding: 0 15px
+  padding: 0 15px
+
 .swiper-item__img
-	box-shadow: 0px 4px 30px rgba(128, 255, 159, 0.25)
-	border-radius: 20px
-	display: block 
-	margin-bottom: 40px
-	width: 89px 
-	height: auto
+  box-shadow: 0px 4px 30px rgba(128, 255, 159, 0.25)
+  border-radius: 20px
+  display: block
+  margin-bottom: 40px
+  width: 89px
+  height: auto
+
 .swiper-item__text
-	font-size: 17px
-	line-height: 165%
+  font-size: 17px
+  line-height: 165%
+
 .swiper-btn-prev
-	img
-		height: auto
+  img
+    height: auto
+
 .smart-solution .container-fluid
-	position: relative
+  position: relative
+
 .swiper-btn-prev
-	position: absolute 
-	top: 50% 
-	left: -54px
-	transform: translateY(-50%) translateX(-100%)
+  position: absolute
+  top: 50%
+  left: -54px
+  transform: translateY(-50%) translateX(-100%)
+
 .swiper-btn-next
-	position: absolute 
-	top: 50% 
-	right: -54px
-	transform: translateY(-50%) translateX(100%)
-	img 
-		height: auto
+  position: absolute
+  top: 50%
+  right: -54px
+  transform: translateY(-50%) translateX(100%)
+
+  img
+    height: auto
+
 .swiper-pagination
-	width: 100%
-	margin-top: 30px
+  bottom: unset !important
+  width: 100%
+  margin-top: 30px
+
 .swiper-pagination-bullet
-	width: 18px 
-	height: 18px
-	border: 
-	border: 1px solid $secondary-color
-	background: transparent
-	margin: 0 3px
-	opacity: 1
+  width: 18px
+  height: 18px
+  border:
+  border: 1px solid $secondary-color
+  background: transparent
+  margin: 0 3px
+  opacity: 1
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active
-	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
-	border: none
+  background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
+  border: none
+
 .read-more__button
-	margin: 0 auto
-	margin-top: 91px
-	width: 556px 
-	max-width: 100%
-	background: transparent
-	border: 2px solid rgba(86, 204, 242, 1)
-	color: #80FF9F
+  margin: 91px auto 0
+  width: 556px
+  max-width: 100%
+  background: transparent
+  border: 2px solid rgba(86, 204, 242, 1)
+  color: #80FF9F
+
 .read-more__button:hover
-	color: #80FF9F
+  color: #80FF9F
 //end smart solution style
 
 //start domains style
 .domains
-	padding-bottom: 420px
-	
-	background: linear-gradient(180deg, rgba(93, 212, 232, 0.03) 0%, rgba(75, 40, 215, 0.33) 100%)
-	.container-fluid
-		padding-top: 144px
-		position: relative
-	.circle 
-		position: absolute
-		top: 0
-		left: 0
-		transform: translateY(-50%) translateX(-50%)
+  padding-bottom: 420px
+
+  background: linear-gradient(180deg, rgba(93, 212, 232, 0.03) 0%, rgba(75, 40, 215, 0.33) 100%)
+
+  .container-fluid
+    padding-top: 144px
+    position: relative
+
+  .circle
+    position: absolute
+    top: 0
+    left: 0
+    transform: translateY(-50%) translateX(-50%)
+
 .domains__content
-	//display: grid
-	//grid-template-areas: "domains-item-text domains-item-image" "domains-item-text domains-item-image" "domains-item-button domains-item-image"
-	//grid-template-rows: 1fr 1fr 1fr
-	//grid-template-columns: 1fr 1fr
-	display: flex
-	flex-wrap: wrap
+  //display: grid
+  //grid-template-areas: "domains-item-text domains-item-image" "domains-item-text domains-item-image" "domains-item-button domains-item-image"
+  //grid-template-rows: 1fr 1fr 1fr
+  //grid-template-columns: 1fr 1fr
+  display: flex
+  flex-wrap: wrap
+
 .domains-item
-	width: 50%
-.domains-item-title 
-	font-size: 40px
-	font-weight: 900
-	color: $title-color
-	margin-bottom: 25px
+  width: 50%
+
+.domains-item-title
+  font-size: 40px
+  font-weight: 900
+  color: $title-color
+  margin-bottom: 25px
+
 .domains-item-text
-	p 
-		font-size: 25px
-		width: 555px
-		max-width: 100%
-		line-height: 1.2
-		margin-bottom: 25px
+  p
+    font-size: 25px
+    width: 555px
+    max-width: 100%
+    line-height: 1.2
+    margin-bottom: 25px
+
 .domains-item-button
-	background: transparent
-	border: 1px solid #5E2CE6
-	border-radius: 8px
-	color: #5E2CE6
-	transform: translateY(-180%)
-.domains-item-button:hover 
-	color: #5E2CE6
+  background: transparent
+  border: 1px solid #5E2CE6
+  border-radius: 8px
+  color: #5E2CE6
+  transform: translateY(-180%)
+
+.domains-item-button:hover
+  color: #5E2CE6
+
 .domains-item-image
-	height: 350px
-	display: flex
-	justify-content: flex-end
-	flex-wrap: wrap
-.domains-item__pentagon	
-	padding: 0px 9px 
+  height: 350px
+  display: flex
+  justify-content: flex-end
+  flex-wrap: wrap
+
+.domains-item__pentagon
+  padding: 0px 9px
+
 .domains-item__pentagon-content
-	background: url('../img/domain-item.svg')
-	width: 174px
-	min-width: 174px
-	background-size: 100%
-	background-repeat: no-repeat
-	background-position: center
-	display: flex
-	justify-content: center
-	align-items: center
-	text-align: center
-	font-size: 16px
-	line-height: 1.25
-	color: #fff
-	height: 177.77px
+  background: url('../img/domain-item.svg')
+  width: 174px
+  min-width: 174px
+  background-size: 100%
+  background-repeat: no-repeat
+  background-position: center
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  font-size: 16px
+  line-height: 1.25
+  color: #fff
+  height: 177.77px
+
 .domains-item__pentagon:nth-child(3),
 .domains-item__pentagon:nth-child(4)
-	transform: translateX(-50%) translateY(-7%)
+  transform: translateX(-50%) translateY(-7%)
 
 //end domains style
 
-//start media 
-@media only screen and (max-width : 1350px)
-	/**/
-	.swiper-btn-prev
-		left: -2vw
+//start media
+@media only screen and (max-width: 1350px)
+  /**/
+  .swiper-btn-prev
+    left: -2vw
 
 
-	.swiper-btn-next
-		right: -2vw
-	.swiper-item
-		padding: 60px 20px 20px 40px
+  .swiper-btn-next
+    right: -2vw
+  .swiper-item
+    padding: 60px 20px 20px 40px
 
 
-@media only screen and (max-width : 1150px)
-	/**/
-	.block
-		padding-left: 40px 
-		padding-right: 15px
-	.domains-item-title
-		font-size: 32px
-	.domains-item-text,
-	.domains-item-button
-		width: 45%
-	.domains-item-image
-		width: 55%
-	.domains-item-text p
-		font-size: 22px
+@media only screen and (max-width: 1150px)
+  /**/
+  .block
+    padding-left: 40px
+    padding-right: 15px
+  .domains-item-title
+    font-size: 32px
+  .domains-item-text,
+  .domains-item-button
+    width: 45%
+  .domains-item-image
+    width: 55%
+  .domains-item-text p
+    font-size: 22px
 
-@media only screen and (max-width : 1100px)
-	/**/
-	.header__button 
-		margin-left: 20px
-	.main-screen__text
-		font-size: 18px
-		width: 300px
-		max-width: 100%
-	.main-screen 
-		min-height: auto
-	.meet__title-wrapper
-		background-size: 100%
-	.meet__title-wrapper
-		top: -2vw
-		left: 0
-		.h2
-			padding-top: 13vw 
-			padding-left: 13vw
-			font-size: 5.5vw
-	.item-text
-		font-size: 22px
-	.swiper-item
-		padding: 50px 20px 20px 30px
+@media only screen and (max-width: 1100px)
+  /**/
+  .header__button
+    margin-left: 20px
+  .main-screen__text
+    font-size: 18px
+    width: 300px
+    max-width: 100%
+  .main-screen
+    min-height: auto
+  .meet__title-wrapper
+    background-size: 100%
+  .meet__title-wrapper
+    top: -2vw
+    left: 0
 
-
-
-@media only screen and (max-width : 992px)
-	/**/
-	.main-screen__content 
-		padding-top: 136px
-		padding-bottom: 157px
-	.video-modal__content
-		height: 50vw
-	.close-modal
-		top: 3vw 
-		right: 3vw
-		width: 4vw
-	.slider-wrapper .container-fluid:before
-		width: 100%
-	.block
-		margin-bottom: 2.667vw
-		min-height: auto
-		padding-bottom: 65px
-		padding-right: 60px
-		.h5 
-			width: auto
-			br 
-				display: none
-	.block__circle
-		display: none
-	.items-section
-		padding-top: 0
-	.smart-solution
-		background: url('../img/ss1.svg') no-repeat top 1vw left -20.533vw / 102.133vw, url('../img/ss2.svg') no-repeat bottom -5.867vw right 5.333vw / 74.400vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
-	.domains__content
-		flex-direction: column
-	.domains-item-text
-		width: 100%
-	.domains-item-text, .domains-item-button
-		transform: translateY(0)
-		width: 100%
-	.domains-item-image
-		justify-content: center
-		align-self: center
-		width: 457px
-		max-width: 100%
-		margin: 30px auto
-	.domains-item-text p
-		width: 100%
-	
+    .h2
+      padding-top: 13vw
+      padding-left: 13vw
+      font-size: 5.5vw
+  .item-text
+    font-size: 22px
+  .swiper-item
+    padding: 50px 20px 20px 30px
 
 
-@media only screen and (max-width : 768px)
-	/**/
-	.meet 
-		padding-top: 3.867vw
-	.meet__title-wrapper
-		top: 0
-		height: 48vw
-	.meet__title-wrapper
-		background: url('../img/meet-bg-mobile.png')
-		background-repeat: no-repeat
-		background-size: 63.328vw
-		background-position: top 0 left -6vw
-	.meet 
-		.item 
-			margin: 0 auto 
-			width: 92vw
-			padding-top: 8vw
-		.container-fluid 
-			max-width: 100vw
-	.meet__title-wrapper .h2
-		padding-left: 3vw
-		font-size: 10.667vw
-		width: 92vw
-		margin: 0 auto
-		padding-top: 18vw
-	.swiper-btn-next,
-	.swiper-btn-prev
-		display: none
-	.domains
-		padding-bottom: 65.333vw
-	
-@media only screen and (max-width : 660px)
-	/**/
-	.swiper-item__text
-		line-height: 1.5
-	.swiper-item__img
-		margin-bottom: 20px
-	.swiper-item
-		padding: 40px 20px 20px 20px
+@media only screen and (max-width: 992px)
+  /**/
+  .main-screen__content
+    padding-top: 136px
+    padding-bottom: 157px
+  .video-modal__content
+    height: 50vw
+  .close-modal
+    top: 3vw
+    right: 3vw
+    width: 4vw
+  .slider-wrapper .container-fluid:before
+    width: 100%
+  .block
+    margin-bottom: 2.667vw
+    min-height: auto
+    padding-bottom: 65px
+    padding-right: 60px
+
+    .h5
+      width: auto
+
+      br
+        display: none
+  .block__circle
+    display: none
+  .items-section
+    padding-top: 0
+  .smart-solution
+    background: url('../img/ss1.svg') no-repeat top 1vw left -20.533vw / 102.133vw, url('../img/ss2.svg') no-repeat bottom -5.867vw right 5.333vw / 74.400vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
+  .domains__content
+    flex-direction: column
+  .domains-item-text
+    width: 100%
+  .domains-item-text, .domains-item-button
+    transform: translateY(0)
+    width: 100%
+  .domains-item-image
+    justify-content: center
+    align-self: center
+    width: 457px
+    max-width: 100%
+    margin: 30px auto
+  .domains-item-text p
+    width: 100%
 
 
+@media only screen and (max-width: 768px)
+  /**/
+  .meet
+    padding-top: 3.867vw
+  .meet__title-wrapper
+    top: 0
+    height: 48vw
+  .meet__title-wrapper
+    background: url('../img/meet-bg-mobile.png')
+    background-repeat: no-repeat
+    background-size: 63.328vw
+    background-position: top 0 left -6vw
+  .meet
+    .item
+      margin: 0 auto
+      width: 92vw
+      padding-top: 8vw
+
+    .container-fluid
+      max-width: 100vw
+  .meet__title-wrapper .h2
+    padding-left: 3vw
+    font-size: 10.667vw
+    width: 92vw
+    margin: 0 auto
+    padding-top: 18vw
+  .swiper-btn-next,
+  .swiper-btn-prev
+    display: none
+  .domains
+    padding-bottom: 65.333vw
+
+@media only screen and (max-width: 660px)
+  /**/
+  .swiper-item__text
+    line-height: 1.5
+  .swiper-item__img
+    margin-bottom: 20px
+  .swiper-item
+    padding: 40px 20px 20px 20px
 
 
-@media only screen and (max-width : 575px)
-	/**/
-	.main-screen
-		background:  url('../img/gradient-blue.png') left -80vw top -15vw, url('../img/main-screen-img.png') right -20vw top -15vw
-		min-height: 144.533vw
-		background-size: 240vw
-		background-repeat: no-repeat
+@media only screen and (max-width: 575px)
+  /**/
+  .main-screen
+    background: url('../img/gradient-blue.png') left -80vw top -15vw, url('../img/main-screen-img.png') right -20vw top -15vw
+    min-height: 144.533vw
+    background-size: 240vw
+    background-repeat: no-repeat
 
-	.main-screen__before
-		width: 186.667vw
-		height: 153.600vw
-		transform: translateX(12vw) translateY(8vw)
-	.main-screen__content .col-md-6:nth-child(2)
-		display: none
-	.main-screen__text
-		font-size: 4.800vw
-		width: 80vw
-	.main-screen__content
-		padding-top: 40vw
-		padding-bottom: 40vw
-	.slider-wrapper--logos
-		display: none
-	.item-text
-		font-size: 4.533vw
-	.block 
-		padding: 12.800vw 10.667vw 13.333vw 11.467vw
-	.block-text
-		font-size: 4.800vw
-		margin-top: 4vw
-	.block-img
-		height: 29.600vw
-		img 
-			max-width: 26.400vw
+  .main-screen__before
+    width: 186.667vw
+    height: 153.600vw
+    transform: translateX(12vw) translateY(8vw)
+  .main-screen__content .col-md-6:nth-child(2)
+    display: none
+  .main-screen__text
+    font-size: 4.800vw
+    width: 80vw
+  .main-screen__content
+    padding-top: 40vw
+    padding-bottom: 40vw
+  .slider-wrapper--logos
+    display: none
+  .item-text
+    font-size: 4.533vw
+  .block
+    padding: 12.800vw 10.667vw 13.333vw 11.467vw
+  .block-text
+    font-size: 4.800vw
+    margin-top: 4vw
+  .block-img
+    height: 29.600vw
 
-
-	.block
-		min-height: 98.133vw
-		background: url('../img/vector.png')  no-repeat bottom -10vw right -2vw / 20.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%)
-	.block-section
-		top: -10vw 
-	.meet 
-		padding-bottom: 22.533vw
-	.items-section
-		padding-bottom: 5.333vw
-	.swiper-item__text
-		font-size: 4.267vw
-
-	.swiper-item 
-		min-height: 98.400vw
-		padding: 10vw 5vw 5vw 8vw
-		background-repeat: no-repeat
-		background-position: bottom -12vw right -5vw
-		background-size: 21.333vw
-		
-	.swiper-btn-next,
-	.swiper-btn-prev
-		display: none
-	.swiper-item .h5
-		min-height: auto
-		margin-bottom: 5.333vw
-	.swiper-item__img
-		margin-bottom: 4.533vw
-		width: 20.267vw
-		border-radius: 2.667vw
-	.swiper-pagination-bullet
-		width: 3.429vw
-		height: 3.429vw
-		margin: 0 0.533vw
-	.swiper-pagination
-		margin-top: 5vw
-	.read-more__button
-		margin-top: 16.533vw
-	.smart-solution
-		padding-top: 7.467vw
-		padding-bottom: 10.667vw
-		.section-sub-title
-			margin-bottom: 5.867vw
-	.domains__content
-		overflow: hidden
-		//grid-template-areas: "domains-item-text" "domains-item-button" "domains-item-image"
-		//grid-template-columns: 1fr
-	.domains-item
-		width: 100%
-
-	.domains-item__pentagon-content
-		width: 34.379vw
-		min-width: 34.379vw
-		height: 35.733vw
-		font-size: 3.467vw
-	.domains-item-image
-		//transform: translateX(8.5vw)
-		height: auto
-		width: 91vw
-		margin-left: 9vw
-		margin-top: 8vw
-		margin-bottom: 8vw
-
-	.domains-item__pentagon
-		padding: 0 1vw
-	.domains-item__pentagon:nth-child(3),
-	.domains-item__pentagon:nth-child(4)
-		transform: translateX(-50%) translateY(0)
-		margin-top: -4vw
-	.domains
-		.container-fluid
-			padding-top: 12.267vw
-		.circle 
-			display: none
-	.domains-item-title
-		font-size: 8.800vw
-		line-height: 1.2
-		margin-bottom: 4.800vw
-	.domains-item-text p
-		margin-bottom: 0
-		font-size: 4.533vw
+    img
+      max-width: 26.400vw
 
 
+  .block
+    min-height: 98.133vw
+    background: url('../img/vector.png') no-repeat bottom -10vw right -2vw / 20.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%)
+  .block-section
+    top: -10vw
+  .meet
+    padding-bottom: 22.533vw
+  .items-section
+    padding-bottom: 5.333vw
+  .swiper-item__text
+    font-size: 4.267vw
 
+  .swiper-item
+    min-height: 98.400vw
+    padding: 10vw 5vw 5vw 8vw
+    background-repeat: no-repeat
+    background-position: bottom -12vw right -5vw
+    background-size: 21.333vw
 
+  .swiper-btn-next,
+  .swiper-btn-prev
+    display: none
+  .swiper-item .h5
+    min-height: auto
+    margin-bottom: 5.333vw
+  .swiper-item__img
+    margin-bottom: 4.533vw
+    width: 20.267vw
+    border-radius: 2.667vw
+  .swiper-pagination-bullet
+    width: 3.429vw
+    height: 3.429vw
+    margin: 0 0.533vw
+  .swiper-pagination
+    margin-top: 5vw
+  .read-more__button
+    margin-top: 16.533vw
+  .smart-solution
+    padding-top: 7.467vw
+    padding-bottom: 10.667vw
 
+    .section-sub-title
+      margin-bottom: 5.867vw
+  .domains__content
+    overflow: hidden
+  //grid-template-areas: "domains-item-text" "domains-item-button" "domains-item-image"
+  //grid-template-columns: 1fr
+  .domains-item
+    width: 100%
 
+  .domains-item__pentagon-content
+    width: 34.379vw
+    min-width: 34.379vw
+    height: 35.733vw
+    font-size: 3.467vw
+  .domains-item-image
+    //transform: translateX(8.5vw)
+    height: auto
+    width: 91vw
+    margin-left: 9vw
+    margin-top: 8vw
+    margin-bottom: 8vw
 
+  .domains-item__pentagon
+    padding: 0 1vw
+  .domains-item__pentagon:nth-child(3),
+  .domains-item__pentagon:nth-child(4)
+    transform: translateX(-50%) translateY(0)
+    margin-top: -4vw
+  .domains
+    .container-fluid
+      padding-top: 12.267vw
 
-
-
-
-	
+    .circle
+      display: none
+  .domains-item-title
+    font-size: 8.800vw
+    line-height: 1.2
+    margin-bottom: 4.800vw
+  .domains-item-text p
+    margin-bottom: 0
+    font-size: 4.533vw
 //end media

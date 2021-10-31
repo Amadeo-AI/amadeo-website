@@ -1,87 +1,212 @@
-let gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	browserSync = require('browser-sync'),
-	uglify = require('gulp-uglify'),
-	concat = require('gulp-concat'),
-	rename = require('gulp-rename'),
-	del = require('del'),
-	autoprefixer = require('gulp-autoprefixer');
+const {src, dest, series, parallel, watch } = require('gulp');
+const sass = require('gulp-sass')(require('node-sass'));
+const browserSync = require('browser-sync');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
+const rename = require('gulp-rename');
+const htmlMin = require('gulp-htmlmin');
+const rev = require('gulp-rev');
+const revReplace = require('gulp-rev-replace');
+const useref = require('gulp-useref');
+const del = require('del');
+const autoprefixer = require('gulp-autoprefixer');
+
+const pages = [
+  'company',
+  'contact',
+  'integrations',
+  'platform',
+  'product',
+  'solutions',
+  'technology',
+  'terms-of-use'
+];
+
+const BuildCss = async (pageName) => src([`app/sass/${pageName}.sass`])
+    .pipe(sass({outputStyle: 'full'}))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 2 versions']
+    }))
+    .pipe(concat(`${pageName}.css`))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.reload({stream: true}));
+
+const BuildCssForPage = async (
+  pageName,
+  minify = true,
+  destination = 'build/css'
+) => new Promise((resolve) =>
+  src([`app/sass/${pageName}.sass`])
+    .pipe(sass(minify ? {outputStyle: 'compressed'} : {}))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 2 versions']
+    }))
+    .pipe(concat(`${pageName}.css`))
+    .pipe(rename({suffix: ''}))
+    .pipe(rev())
+    .pipe(dest(destination))
+    .pipe(rev.manifest('manifest/rev-manifest.json', {
+      base: 'manifest',
+      merge: true
+    }))
+    .pipe(dest('manifest'))
+    .on('end', resolve)
+);
 
 
-gulp.task('clean', async function(){
-	del.sync('docs')
-})
+function cleanJob() {
+  return del(['build', 'manifest']);
+}
 
-gulp.task('sass', function(){
-	return gulp.src('app/sass/**/*.sass')
-		.pipe(sass({outputStyle: 'expanded'}))
-		.pipe(autoprefixer({
-			overrideBrowserslist:  ['last 8 versions']
-		}))
-		// .pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('app/css'))
-		.pipe(browserSync.reload({stream: true}))
-});
+async function sassJob() {
+    src([
+      'app/sass/style.sass',
+      'app/sass/header.sass',
+      'app/sass/call-to-action.sass',
+      'app/sass/footer.sass',
+    ])
+      .pipe(sass({outputStyle: 'full'}))
+      .pipe(concat('style.css'))
+      .pipe(dest('app/css'))
+      .pipe(browserSync.reload({stream: true}));
 
+  for (const name of pages) {
+    await BuildCss(name);
+  }
 
-// gulp.task('css', function(){
-// 	return gulp.src([
-// 		'node_modules/normalize.css/normalize.css',
-// 		'node_modules/slick-carousel/slick/slick.css'
-// 		])
-// 	.pipe(sass({outputStyle: 'compressed'}))
-// 	.pipe(concat('libs.css'))
-// 	.pipe(rename({suffix: '.min'}))
-// 	.pipe(gulp.dest('app/css'))
-// 	.pipe(browserSync.reload({stream: true}))
-// })
-
-gulp.task('html', function(){
-	return gulp.src('app/*.html')
-	.pipe(browserSync.reload({stream: true}))
-
-});
-
-gulp.task('script', function(){
-	return gulp.src('app/js/*.js')
-	.pipe(browserSync.reload({stream: true}))
-
-});
+    return src([
+      'app/sass/home.sass',
+      'app/sass/updates-modal.sass'
+    ])
+      .pipe(sass({outputStyle: 'full'}))
+      .pipe(concat('home.css'))
+      .pipe(dest('app/css'))
+      .pipe(browserSync.reload({stream: true}));
+}
 
 
+function cssJob() {
+  return src()
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(concat('libs.css'))
+    .pipe(rename({suffix: ''}))
+    .pipe(dest('app/css'))
+    .pipe(browserSync.reload({stream: true}));
+}
 
-gulp.task('browser-sync', function() {
-    browserSync.init({
-        server: {
-            baseDir: "app/"
-        }
-    });
-});
+function htmlJob() {
+  return src('app/*.html')
+    .pipe(browserSync.reload({stream: true}));
+}
 
-gulp.task('export', function(){
-	let buildHtml = gulp.src('app/**/*.html')
-		.pipe(gulp.dest('docs'));
+function scriptJob() {
+  return src('app/js/*.js')
+    .pipe(browserSync.reload({stream: true}));
+}
 
-	let BuildCss = gulp.src('app/css/**/*.css')
-	.pipe(gulp.dest('docs/css'));
+function browserSyncJob() {
+  return browserSync.init({
+    server: {
+      baseDir: 'app/'
+    }
+  });
+}
 
-	let BuildJs = gulp.src('app/js/**/*.js')
-	.pipe(gulp.dest('docs/js'));
+async function exportJob() {
+  const BuildCssMain = await new Promise((resolve) =>
+    src([
+      'app/sass/style.sass',
+      'app/sass/header.sass',
+      'app/sass/call-to-action.sass',
+      'app/sass/footer.sass',
+    ])
+      .pipe(sass({outputStyle: 'compressed'}))
+      .pipe(concat('style.css'))
+      .pipe(rename({suffix: ''}))
+      .pipe(rev())
+      .pipe(dest('build/css'))
+      .pipe(rev.manifest('manifest/rev-manifest.json', {
+        base: 'manifest',
+        merge: true
+      }))
+      .pipe(dest('manifest'))
+      .on('end', resolve)
+  );
 
-	let BuildFonts = gulp.src('app/fonts/**/*.*')
-	.pipe(gulp.dest('docs/fonts'));
+  const BuildCssHome = await new Promise((resolve) =>
+    src([
+      'app/sass/home.sass',
+      'app/sass/updates-modal.sass'
+    ])
+      .pipe(sass({outputStyle: 'compressed'}))
+      .pipe(concat('home.css'))
+      .pipe(rename({suffix: ''}))
+      .pipe(rev())
+      .pipe(dest('build/css'))
+      .pipe(rev.manifest('manifest/rev-manifest.json', {
+        base: 'manifest',
+        merge: true
+      }))
+      .pipe(dest('manifest'))
+      .on('end', resolve)
+  );
 
+  const BuildJs = await new Promise((resolve) =>
+    src('app/js/**/*.js')
+      .pipe(uglify())
+      .pipe(rev())
+      .pipe(dest('build/js'))
+      .pipe(rev.manifest('manifest/rev-manifest.json', {
+        base: 'manifest',
+        merge: true
+      }))
+      .pipe(dest('manifest'))
+      .on('end', resolve)
+  );
 
-	let BuildImg = gulp.src('app/img/**/*.*')
-	.pipe(gulp.dest('docs/img'));
-});
+  const BuildFonts = await new Promise((resolve) =>
+    src('app/fonts/**/*.*')
+      .pipe(dest('build/fonts'))
+      .on('end', resolve)
+  );
 
-gulp.task('watch', function(){
-	gulp.watch('app/sass/**/*.sass', gulp.parallel('sass'));
-	gulp.watch('app/*.html', gulp.parallel('html'));
-	gulp.watch('app/js/*.js',gulp.parallel('script'));
-});
+  const BuildImg = await new Promise((resolve) =>
+    src('app/img/**/*.*')
+      .pipe(dest('build/img'))
+      .on('end', resolve)
+  );
 
-gulp.task('build', gulp.series('clean', 'export'));
+  for (const name of pages) {
+    await BuildCssForPage(name);
+  }
 
-gulp.task('default', gulp.parallel('sass', 'browser-sync', 'watch'))
+  const manifest = src('manifest/rev-manifest.json');
+  const buildHtml = await new Promise((resolve) =>
+    src('app/**/*.html')
+      .pipe(useref())
+      .pipe(revReplace({ manifest }))
+      .pipe(htmlMin({
+        collapseWhitespace: true,
+        removeComments: true
+      }))
+      .pipe(dest('build'))
+      .on('end', resolve)
+  );
+}
+
+function watchJob() {
+  watch('app/sass/**/*.sass', parallel(sassJob));
+  watch('app/*.html', parallel(htmlJob));
+  watch('app/js/*.js', parallel(scriptJob));
+}
+
+exports.clean = cleanJob;
+exports.sass = sassJob;
+exports.css = cssJob;
+exports.html = htmlJob;
+exports.script = scriptJob;
+exports.browserSync = browserSyncJob;
+exports.export = exportJob;
+exports.watch = watchJob;
+exports.build = series(cleanJob, exportJob);
+exports.default = parallel(sassJob, browserSyncJob, watchJob);
