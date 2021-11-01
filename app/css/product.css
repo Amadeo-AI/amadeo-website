@@ -337,8 +337,8 @@
 @media only screen and (max-width: 992px) {
   /**/
   .page-main-screen--product-bg {
-    width: 88.267vw;
-    height: 89.067vw;
+    width: 62vw;
+    height: 62vw;
     background-position: left 28vw top;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -346,13 +346,13 @@
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    left: 11.467vw;
+    left: 38vw;
   }
   .page-main-screen--product {
     min-height: auto;
     padding-bottom: 15.200vw;
-    background: url("../img/union.svg") no-repeat top -34.667vw left -37.867vw/88.267vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
-    background: url("../img/union.svg") no-repeat top -34.667vw left -37.867vw/88.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+    background: url("../img/union.svg") no-repeat top -37vw left 7.867vw/62vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+    background: url("../img/union.svg") no-repeat top -37vw left 7.867vw/62vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
   }
   .page-main-screen--product:after {
     display: none;
@@ -469,6 +469,24 @@
 
 @media only screen and (max-width: 575px) {
   /**/
+  .page-main-screen--product-bg {
+    width: 88.267vw;
+    height: 89.067vw;
+    background-position: left 28vw top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: 100%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 11.467vw;
+  }
+  .page-main-screen--product {
+    min-height: auto;
+    padding-bottom: 15.200vw;
+    background: url("../img/union.svg") no-repeat top -34.667vw left -37.867vw/88.267vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+    background: url("../img/union.svg") no-repeat top -34.667vw left -37.867vw/88.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+  }
   .product-content {
     padding-top: 12.533vw;
   }

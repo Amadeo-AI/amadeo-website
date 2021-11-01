@@ -135,7 +135,6 @@
   }
   .call-to-action__title {
     text-align: left;
-    font-size: 8.800vw;
   }
   .schedule-demo {
     min-width: 52vw;
@@ -162,7 +161,6 @@
   .call-to-action__text {
     text-align: left;
     max-width: 100%;
-    font-size: 3.733vw;
   }
   .call-to-action--page .call-to-action__title {
     margin-bottom: 6.667vw;
@@ -192,5 +190,16 @@
   }
   .call-to-action__background {
     height: 106.667vw;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  /**/
+  .call-to-action__title {
+    text-align: left;
+    font-size: 8.800vw;
+  }
+  .call-to-action__text {
+    font-size: 3.733vw;
   }
 }

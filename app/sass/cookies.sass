@@ -1,0 +1,46 @@
+@import "vars"
+
+.cookie-law-info-bar
+	background: #000 
+	color: #fff 
+	position: fixed
+	bottom: 0 
+	left: 0 
+	width: 100%
+	z-index: 999
+	font-size: 14.6px
+	padding: 15px 0
+	.container-fluid 
+		width: 90vw
+.cli-bar-container
+	display: flex
+	align-items: center
+.cli-bar-btn_container
+	display: flex
+.cli-bar-message a
+	color: #00FF83
+.cli_action_button
+	padding: 5px 12px
+	color: rgb(51, 51, 51)
+	background-color: rgb(222, 223, 224)
+	white-space: nowrap
+	margin-left: 5px
+	cursor: pointer
+.cli_action_button--green
+	background: #00FF83
+.cli_action_button:hover
+	color: rgb(51, 51, 51)
+
+@media only screen and (max-width : 768px)
+	/**/
+	.cli-bar-container
+		flex-direction: column
+		align-items: flex-start
+	.cli_action_button--green
+		margin-left: 0
+	.cli-bar-btn_container
+		margin-top: 15px
+	.cli_action_button
+		padding: 5px 12px
+	
+

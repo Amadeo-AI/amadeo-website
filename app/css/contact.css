@@ -273,8 +273,15 @@
   margin-bottom: 27px;
 }
 
-.input-wrapper--error .input {
+.input-wrapper-error .input,
+.input-wrapper-error .select-selected,
+.input-wrapper-error .textarea {
   border: 1px solid rgba(230, 89, 44, 0.4);
+  border-radius: 10px;
+}
+
+.input-wrapper-error .select-selected:after {
+  display: none;
 }
 
 .input-wrapper-error {
@@ -314,6 +321,104 @@
   right: 0;
 }
 
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none;
+}
+
+/*hide original SELECT element: */
+.select-selected {
+  width: 100%;
+  background: url("../img/contact/1.svg") no-repeat left 31px center;
+  background-color: rgba(196, 196, 196, 0.1);
+  border: 1px solid rgba(94, 44, 230, 0.1);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  height: 50px;
+  padding-left: 79px;
+  padding-right: 10px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+  background-repeat: no-repeat;
+  background-position: left 31px center;
+  outline: none;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: url("../img/contact/arrow.svg");
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  content: url("../img/contact/up.svg");
+}
+
+.select-selected.select-checked {
+  background: url("../img/contact/ic_industry_1.svg") no-repeat left 31px center;
+  background-color: rgba(196, 196, 196, 0.1);
+  color: #000;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  color: #A2A2A4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  border: 1px solid rgba(94, 44, 230, 0.1);
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div {
+  padding-left: 35px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.select-items div:hover,
+.same-as-selected {
+  background: rgba(94, 44, 230, 0.05);
+  color: #000;
+}
+
+.select-items .same-as-selected {
+  color: #000;
+  background: rgba(94, 44, 230, 0.05);
+}
+
 @media only screen and (max-width: 1440px) {
   .footer-bg {
     width: 35.833vw;
@@ -343,6 +448,7 @@
   }
   .page-main-screen--contact {
     min-height: auto;
+    padding-bottom: 15vw;
     background: url("../img/integrations/i4.svg") no-repeat top 0 left 32.533vw/40.533vw, url("../img/contact/i2.svg") no-repeat right 0 bottom 0/92vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
     background: url("../img/integrations/i4.svg") no-repeat top 0 left 32.533vw/40.533vw, url("../img/contact/i2.svg") no-repeat right 0 bottom 0/92vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
   }
@@ -368,7 +474,7 @@
     width: 64vw;
   }
   .input,
-  .select {
+  .select-selected {
     height: 9.333vw;
   }
   .textarea {
@@ -384,18 +490,26 @@
     padding-top: 1.8vw;
   }
   .input,
-  .select,
+  .select-selected,
   .textarea {
     padding-left: 9.867vw;
     font-size: 3.733vw;
+  }
+  .select-selected div {
+    font-size: 3.733vw;
+  }
+  .select-selected:after {
+    -webkit-transform: translateY(-50%) scale(0.8);
+        -ms-transform: translateY(-50%) scale(0.8);
+            transform: translateY(-50%) scale(0.8);
   }
   .contact-page .section-title {
     width: 74.667vw;
     margin-left: auto;
     margin-right: auto;
   }
-  .select {
-    background: url("../img/contact/arrow.svg") no-repeat right 3vw top 50%/3.2vw, url("../img/contact/ic_name.svg") no-repeat left 3.467vw center/3.2vw;
+  .select-selected {
+    background: url("../img/contact/1.svg") no-repeat left 3.467vw center/3.2vw;
     background-color: rgba(196, 196, 196, 0.1);
   }
   .select:focus {
@@ -405,6 +519,15 @@
   .select:valid {
     background: url("../img/contact/arrow.svg") no-repeat right 3vw top 50%/3.2vw, url("../img/contact/ic_name_1.svg") no-repeat left 3.467vw center/3.2vw;
     background-color: rgba(196, 196, 196, 0.1);
+  }
+  .select-selected.select-checked {
+    background: url("../img/contact/ic_industry_1.svg") no-repeat left 3.467vw center/3.2vw;
+    background-color: rgba(196, 196, 196, 0.1);
+    color: #000;
+  }
+  .select-items div,
+  .select-selected {
+    font-size: 3.733vw;
   }
   .form .button {
     height: 12.800vw;
@@ -429,5 +552,13 @@
   }
   .contact-page .container-fluid:after {
     display: none;
+  }
+  .select-items div {
+    padding-left: 5vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+  .input-wrapper-error:before {
+    font-size: 3.733vw;
   }
 }
