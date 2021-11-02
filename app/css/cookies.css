@@ -1,0 +1,73 @@
+.cookie-law-info-bar {
+  background: #000;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  font-size: 14.6px;
+  padding: 15px 0;
+}
+
+.cookie-law-info-bar .container-fluid {
+  width: 90vw;
+}
+
+.cli-bar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cli-bar-btn_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cli-bar-message a {
+  color: #00FF83;
+}
+
+.cli_action_button {
+  padding: 5px 12px;
+  color: #333333;
+  background-color: #dedfe0;
+  white-space: nowrap;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.cli_action_button--green {
+  background: #00FF83;
+}
+
+.cli_action_button:hover {
+  color: #333333;
+}
+
+@media only screen and (max-width: 768px) {
+  /**/
+  .cli-bar-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .cli_action_button--green {
+    margin-left: 0;
+  }
+  .cli-bar-btn_container {
+    margin-top: 15px;
+  }
+  .cli_action_button {
+    padding: 5px 12px;
+  }
+}

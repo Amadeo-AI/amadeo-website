@@ -134,13 +134,25 @@
   .technology .item-row--reverse .item-col {
     padding-left: 0;
   }
+  .page-main-screen--product-bg {
+    width: 52vw;
+    height: 52.5vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 280px;
+    left: -200px;
+  }
+  .page-main-screen--technology {
+    background: url("../img/union.svg") no-repeat top -10vw right -25vw/52vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+    background: url("../img/union.svg") no-repeat top -10vw right -25vw/52vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+  }
 }
 
 @media only screen and (max-width: 768px) {
   /**/
   .page-main-screen--product-bg {
-    width: 88.267vw;
-    height: 89.067vw;
+    width: 68vw;
+    height: 68vw;
     background-position: left 28vw top;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -148,13 +160,13 @@
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    left: 11.467vw;
+    left: 32vw;
   }
   .page-main-screen--technology {
     min-height: auto;
     padding-bottom: 15.200vw;
-    background: url("../img/union.svg") no-repeat top -57.867vw left 2vw/88.267vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
-    background: url("../img/union.svg") no-repeat top -57.867vw left 2vw/88.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+    background: url("../img/union.svg") no-repeat top -37.867vw left 7vw/68vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+    background: url("../img/union.svg") no-repeat top -37.867vw left 7vw/68vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
   }
   .graph {
     padding-bottom: 0;
@@ -166,6 +178,18 @@
 
 @media only screen and (max-width: 575px) {
   /**/
+  .page-main-screen--technology {
+    min-height: auto;
+    padding-bottom: 15.200vw;
+    background: url("../img/union.svg") no-repeat top -57.867vw left 2vw/88.267vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+    background: url("../img/union.svg") no-repeat top -57.867vw left 2vw/88.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);
+  }
+  .page-main-screen--product-bg {
+    width: 88.267vw;
+    height: 89.067vw;
+    background-position: left 28vw top;
+    left: 11.467vw;
+  }
   .block {
     padding: 12.800vw 10.667vw 13.333vw 11.467vw;
   }
