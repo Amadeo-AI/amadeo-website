@@ -258,6 +258,11 @@ p {
   margin: 0 auto;
 }
 
+.page-main-screen .page-main-screen__content {
+  position: relative;
+  z-index: 3;
+}
+
 @media only screen and (max-width: 1250px) {
   /**/
   .item-row--reverse .item-col {
