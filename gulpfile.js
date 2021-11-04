@@ -8,6 +8,7 @@ const htmlMin = require('gulp-htmlmin');
 const rev = require('gulp-rev');
 const revReplace = require('gulp-rev-replace');
 const useref = require('gulp-useref');
+const inject = require('gulp-inject');
 const del = require('del');
 const autoprefixer = require('gulp-autoprefixer');
 
@@ -28,7 +29,7 @@ const BuildCss = async (pageName) => src([`app/sass/${pageName}.sass`])
       overrideBrowserslist: ['last 2 versions']
     }))
     .pipe(concat(`${pageName}.css`))
-    .pipe(dest('app/css'))
+    .pipe(dest('run/css'))
     .pipe(browserSync.reload({stream: true}));
 
 const BuildCssForPage = async (
@@ -53,21 +54,37 @@ const BuildCssForPage = async (
     .on('end', resolve)
 );
 
+function injectComponent(name, ext) {
+  return inject(src(`app/components/${name}.${ext}`), {
+    starttag: `<!-- ${name}:${ext} -->`,
+    transform: function (filePath, file) {
+      // return file contents as string
+      return file.contents.toString('utf8');
+    }
+  }, { name: name });
+}
 
 function cleanJob() {
   return del(['build', 'manifest']);
 }
 
+function cleanRunJob() {
+  return del(['run']);
+}
+
 async function sassJob() {
     src([
+      'app/sass/bootstrap.css',
+      'app/sass/reboot.css',
       'app/sass/style.sass',
-      'app/sass/header.sass',
       'app/sass/call-to-action.sass',
+      'app/sass/header.sass',
       'app/sass/footer.sass',
+      'app/sass/cookies.sass',
     ])
       .pipe(sass({outputStyle: 'full'}))
       .pipe(concat('style.css'))
-      .pipe(dest('app/css'))
+      .pipe(dest('run/css'))
       .pipe(browserSync.reload({stream: true}));
 
   for (const name of pages) {
@@ -76,49 +93,56 @@ async function sassJob() {
 
     return src([
       'app/sass/home.sass',
-      'app/sass/updates-modal.sass'
+      'app/sass/updates-modal.sass',
+      'app/sass/swiper.css'
     ])
       .pipe(sass({outputStyle: 'full'}))
       .pipe(concat('home.css'))
-      .pipe(dest('app/css'))
+      .pipe(dest('run/css'))
       .pipe(browserSync.reload({stream: true}));
-}
-
-
-function cssJob() {
-  return src()
-    .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(concat('libs.css'))
-    .pipe(rename({suffix: ''}))
-    .pipe(dest('app/css'))
-    .pipe(browserSync.reload({stream: true}));
 }
 
 function htmlJob() {
   return src('app/*.html')
+    .pipe(injectComponent('head', 'html'))
+    .pipe(injectComponent('head', 'js'))
+    .pipe(injectComponent('updates-alert', 'html'))
+    .pipe(injectComponent('menu', 'html'))
+    .pipe(injectComponent('call-to-action', 'html'))
+    .pipe(injectComponent('footer', 'html'))
+    .pipe(injectComponent('cookie-alert', 'html'))
+    .pipe(dest('run'))
     .pipe(browserSync.reload({stream: true}));
 }
 
 function scriptJob() {
   return src('app/js/*.js')
+    .pipe(dest('run/js'))
     .pipe(browserSync.reload({stream: true}));
 }
 
 function browserSyncJob() {
   return browserSync.init({
     server: {
-      baseDir: 'app/'
-    }
+      baseDir: 'run/',
+    },
+      serveStatic: [{
+        route: '/img',
+        dir: 'app/img'
+      }],
   });
 }
 
 async function exportJob() {
   const BuildCssMain = await new Promise((resolve) =>
     src([
+      'app/sass/bootstrap.css',
+      'app/sass/reboot.css',
       'app/sass/style.sass',
-      'app/sass/header.sass',
       'app/sass/call-to-action.sass',
+      'app/sass/header.sass',
       'app/sass/footer.sass',
+      'app/sass/cookies.sass',
     ])
       .pipe(sass({outputStyle: 'compressed'}))
       .pipe(concat('style.css'))
@@ -136,7 +160,8 @@ async function exportJob() {
   const BuildCssHome = await new Promise((resolve) =>
     src([
       'app/sass/home.sass',
-      'app/sass/updates-modal.sass'
+      'app/sass/updates-modal.sass',
+      'app/sass/swiper.css'
     ])
       .pipe(sass({outputStyle: 'compressed'}))
       .pipe(concat('home.css'))
@@ -182,7 +207,14 @@ async function exportJob() {
 
   const manifest = src('manifest/rev-manifest.json');
   const buildHtml = await new Promise((resolve) =>
-    src('app/**/*.html')
+    src('app/*.html')
+      .pipe(injectComponent('head', 'html'))
+      .pipe(injectComponent('head', 'js'))
+      .pipe(injectComponent('updates-alert', 'html'))
+      .pipe(injectComponent('menu', 'html'))
+      .pipe(injectComponent('call-to-action', 'html'))
+      .pipe(injectComponent('footer', 'html'))
+      .pipe(injectComponent('cookie-alert', 'html'))
       .pipe(useref())
       .pipe(revReplace({ manifest }))
       .pipe(htmlMin({
@@ -202,11 +234,10 @@ function watchJob() {
 
 exports.clean = cleanJob;
 exports.sass = sassJob;
-exports.css = cssJob;
 exports.html = htmlJob;
 exports.script = scriptJob;
 exports.browserSync = browserSyncJob;
 exports.export = exportJob;
 exports.watch = watchJob;
 exports.build = series(cleanJob, exportJob);
-exports.default = parallel(sassJob, browserSyncJob, watchJob);
+exports.default = series(cleanRunJob, sassJob, htmlJob, scriptJob, parallel(browserSyncJob, watchJob));

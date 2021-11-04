@@ -1,9 +1,10 @@
 (() => {
+  "use strict";
 // start menu
   document.getElementById('menu-btn').onclick = function () {
     document.getElementById('menu-btn').classList.toggle('active');
     document.getElementById('header').classList.toggle('active');
-    document.getElementById('updates').classList.toggle('active');
+    document.getElementById('updates')?.classList.toggle('active');
   }
   document.getElementById('header__menu-item--platform').onclick = function () {
     document.getElementById('header__menu-item--sub-wrap').classList.toggle('active');
@@ -13,8 +14,28 @@
 
 //start close update modal
   if (document.getElementById('updates__close')) {
-    document.getElementById('updates__close').onclick = function () {
+    if (!sessionStorage.getItem('updates__news__closed')) {
+      document.getElementById('updates').classList.remove('hide');
+    }
+    document.getElementById('updates__close').onclick = () => {
+      sessionStorage.setItem('updates__news__closed', 'true');
       document.getElementById('updates').classList.add('hide');
+    }
+  }
+//end close update modal
+
+  //start close update modal
+  if (document.getElementById('cookie__alert')) {
+    if (!localStorage.getItem('amadeo__cookie__accepted')) {
+      document.getElementById('cookie__alert').classList.remove('hide');
+      document.getElementById('cookie__alert__accept').onclick = () => {
+        localStorage.setItem('amadeo__cookie__accepted', 'true');
+        document.getElementById('cookie__alert').classList.add('hide');
+      }
+      document.getElementById('cookie__alert__reject').onclick = () => {
+        localStorage.removeItem('amadeo__cookie__accepted');
+        document.getElementById('cookie__alert').classList.add('hide');
+      }
     }
   }
 //end close update modal
@@ -99,11 +120,6 @@
         // when window width is >= 320px
         0: {
           slidesPerView: 1,
-
-        },
-        // when window width is >= 480px
-        768: {
-          slidesPerView: 2,
 
         },
         // when window width is >= 480px

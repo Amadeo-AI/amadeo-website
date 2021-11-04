@@ -1,4 +1,5 @@
 (() => {
+  "use strict";
   const $tabs = (target, tabNumber = '') => {
     const _elemTabs = typeof target === 'string' ? document.querySelector(target) : target;
     const _showTab = function (tabsLinkTarget) {
