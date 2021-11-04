@@ -11,17 +11,26 @@
   position: absolute;
   top: 63px;
   left: 0;
+  z-index: 0;
 }
 
 .block-section--technology {
   padding-top: 112px;
   padding-bottom: 200px;
   background: url("../img/technology.svg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
 }
 
 .block-section--technology .h5 {
   min-height: 80px;
+}
+
+.page-main-screen__content {
+  position: relative;
+  z-index: 3;
 }
 
 .block {
@@ -60,6 +69,10 @@
 
 .block-img img {
   height: auto;
+}
+
+.technology {
+  padding-top: 85px;
 }
 
 .technology .items-section {
@@ -141,6 +154,9 @@
     background-repeat: no-repeat;
     top: 280px;
     left: -200px;
+  }
+  .technology {
+    padding-top: 0;
   }
   .page-main-screen--technology {
     background: url("../img/union.svg") no-repeat top -10vw right -25vw/52vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%);

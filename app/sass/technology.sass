@@ -4,23 +4,28 @@
   background: url('../img/union.svg') no-repeat top -325px right -434px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
 
 .page-main-screen--product-bg
-  width: 410px
-  height: 716px
-  background: url('../img/union.svg')
-  background-position: right top
-  position: absolute
-  top: 63px
-  left: 0
+	width: 410px
+	height: 716px
+	background: url('../img/union.svg')
+	background-position: right top
+	position: absolute
+	top: 63px
+	left: 0
+	z-index: 0
 //start block section style
 .block-section--technology
-  padding-top: 112px
-  padding-bottom: 200px
-  background: url('../img/technology.svg')
-  position: relative
-
-  .h5
-    min-height: 80px
-
+	padding-top: 112px
+	padding-bottom: 200px
+	background: url('../img/technology.svg')
+	background-position: bottom center
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	.h5
+		min-height: 80px
+.page-main-screen__content
+	position: relative
+	z-index: 3
 .block
   width: 100%
   min-height: 498px
@@ -55,18 +60,16 @@
 
 //start technology style
 .technology
-  .items-section
-    padding-bottom: 0
-
-  .section-title
-    margin-bottom: 90px
-    color: $main-color
-
-  .item-row--reverse .item-col
-    padding-left: 60px
-
-  .item-row
-    margin-bottom: 130px
+	padding-top: 85px
+	.items-section
+		padding-bottom: 0
+	.section-title
+		margin-bottom: 90px
+		color: $main-color
+	.item-row--reverse .item-col
+		padding-left: 60px
+	.item-row
+		margin-bottom: 130px
 //end technology style
 .graph
   padding-bottom: 110px
@@ -115,6 +118,8 @@
 		background-repeat: no-repeat
 		top: 280px
 		left: -200px
+	.technology
+		padding-top: 0
 	.page-main-screen--technology
 		background:  url('../img/union.svg') no-repeat top -10vw right -25vw/ 52vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
 
