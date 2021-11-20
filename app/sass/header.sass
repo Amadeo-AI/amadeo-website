@@ -38,8 +38,6 @@
 .header__menu-link:hover
   color: #fff
   cursor: pointer
-a.header__menu-link
-  padding-right: 80%
 
 .header__button
   font-size: 15px
@@ -54,6 +52,9 @@ a.header__menu-link
 .header__menu-item--bold
   font-weight: 700
   border-right: 1px solid $secondary-color
+
+.header__menu-item--bold:last-child
+  border-right: none
 
 .header__menu-item--sub-wrap
   display: none
@@ -102,7 +103,7 @@ a.header__menu-link
   min-height: 457px
 
 .dropdown__menu-item--overview
-  background: url('../img/menu-vector.png') no-repeat bottom -10px right -10px, linear-gradient(332.45deg, #5E2CE6 0%, #131DAA 48.36%, #0A1193 64.03%, #0A1193 83.25%)
+  background: url('../img/menu-vector.svg') no-repeat bottom -10px right -10px, linear-gradient(332.45deg, #5E2CE6 0%, #131DAA 48.36%, #0A1193 64.03%, #0A1193 83.25%)
   width: 327px
   border-top-left-radius: 5px
   border-bottom-left-radius: 5px
@@ -289,9 +290,10 @@ a.header__menu-link
         flex-direction: column
         align-items: center
 
-
     .header__button
       display: none
+  a.header__menu-link
+    padding-right: 80%
   .dropdown__menu
     display: none
   .header__menu-item--bold
@@ -370,5 +372,7 @@ a.header__menu-link
   .header__menu-sub-item
     font-size: 4.800vw
     padding: 3.2vw 9.067vw
+  a.header__menu-link
+    padding-right: 80%
 //end media
 
