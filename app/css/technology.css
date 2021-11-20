@@ -36,8 +36,8 @@
 .block {
   width: 100%;
   min-height: 498px;
-  background: url("../img/vector.png") no-repeat bottom -12px right -12px, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
-  background: url("../img/vector.png") no-repeat bottom -12px right -12px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
+  background: url("../img/vector.svg") no-repeat bottom -12px right -12px, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
+  background: url("../img/vector.svg") no-repeat bottom -12px right -12px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
   border-radius: 20px;
   color: #fff;
   padding: 65px 40px 20px 48px;
@@ -221,8 +221,8 @@
   }
   .block {
     min-height: 98.133vw;
-    background: url("../img/vector.png") no-repeat bottom -10vw right -2vw/20.267vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
-    background: url("../img/vector.png") no-repeat bottom -10vw right -2vw/20.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
+    background: url("../img/vector.svg") no-repeat bottom -10vw right -2vw/20.267vw, -o-linear-gradient(117.59deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
+    background: url("../img/vector.svg") no-repeat bottom -10vw right -2vw/20.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #0025F0 72.91%, #0A1193 100%);
   }
   .block-section--technology {
     padding-top: 10.400vw;

@@ -1,71 +1,71 @@
 @import "vars"
 
 //start main screen style
-.page-main-screen--product 
+.page-main-screen--product
 	background:  url('../img/union.svg') no-repeat top -325px right -434px, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
 	.page-main-screen__content
 		padding-top: 125px
 .page-main-screen--product-bg
-	width: 410px 
+	width: 410px
 	height: 716px
 	background: url('../img/union.svg')
 	background-position: right top
-	position: absolute 
-	top: 63px 
+	position: absolute
+	top: 63px
 	left: 0
 .page-main-screen__content
-	.container-fluid	
-		width: 1314px 
+	.container-fluid
+		width: 1314px
 		max-width: 93.867vw
-.page-main-screen--product:after 
+.page-main-screen--product:after
 	content: ''
-	width: 66px 
-	height: 66px 
+	width: 66px
+	height: 66px
 	border-radius: 50%
 	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
-	display: block 
-	position: absolute 
+	display: block
+	position: absolute
 	right: 61px
-	transform: translateY(50%) 
+	transform: translateY(50%)
 	bottom: 0
 //end main screen style
 
 //start product content style
 .product-content
 	padding-top: 100px
-	.container-fluid 
-		width: 1314px 
+	.container-fluid
+		width: 1314px
 		max-width: 93.867vw
-.section-header 
+.section-header
 	position: relative
-.section-header:after 
+.section-header:after
 	content: ''
-	width: 66px 
-	height: 66px 
+	width: 66px
+	height: 66px
 	border-radius: 50%
 	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
-	display: block 
-	position: absolute 
+	display: block
+	position: absolute
 	left: 0
 	bottom: 0
 	transform: translateY(50%)
-.product-item 
+.product-item
 	padding-top: 132px
 .item-col__text
-	
-	li 
+
+	li
 		color: #5E2CE6
-		span 
+		span
 			color: rgba(0, 0, 0, 0.85)
 .product__link
-	display: flex 
+	display: flex
 	align-items: center
 	color: $main-color
 	margin-top: 23px
 	font-size: 18px
-	img 
+	img
 		margin-left: 8px
-.product__link:hover 
+.product__link:hover
 	color: $main-color
 .product-item__col
 	text-align: center
@@ -81,23 +81,23 @@
 .product-item__image,
 .product-item__image-2
 	position: relative
-	img 
+	img
 		position: relative
 		z-index: 1
-.product-item__image:after 
+.product-item__image:after
 	content: ''
-	width: 142px 
-	height: 142px 
+	width: 142px
+	height: 142px
 	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
 	display: block
 	border-radius: 50%
 	right: 0px
 	bottom: 10px
 	position: absolute
-.product-item__image-2:before 
+.product-item__image-2:before
 	content: ''
-	width: 142px 
-	height: 142px 
+	width: 142px
+	height: 142px
 	background: linear-gradient(149.69deg, #56CCF2 17.35%, #80FF9F 95.55%)
 	display: block
 	border-radius: 50%
@@ -115,13 +115,13 @@
 	padding-top: 157px
 .product-integrations__content
 	min-height: 535px
-	width: 100% 
-	text-align: center 
-	display: flex 
-	justify-content: center 
+	width: 100%
+	text-align: center
+	display: flex
+	justify-content: center
 	align-items: center
 	position: relative
-	.h2 
+	.h2
 		width: 763px
 		max-width: 100%
 .integrations__icon
@@ -136,7 +136,7 @@
 .integrations__icon--jira
 	top: 379px
 	right: 196px
-	
+
 .integrations__icon--skype
 	left: -40px
 	bottom: 35px
@@ -151,8 +151,8 @@
 	padding-bottom: 89px
 	display: flex
 	justify-content: center
-	.button 
-		width: 556px 
+	.button
+		width: 556px
 		max-width: 100%
 //end product integrations style
 
@@ -176,7 +176,7 @@
 	display: flex
 	justify-content: space-between
 	align-items: center
-	img 
+	img
 		height: auto
 	.button
 		height: 50px
@@ -192,7 +192,7 @@
 	margin-bottom: 15px
 	padding-right: 20px
 .modules__item
-	br 
+	br
 		display: none
 
 //end modules style
@@ -213,7 +213,7 @@
 
 @media only screen and (max-width : 1100px)
 	/**/
-	.section-header:after 
+	.section-header:after
 		transform: translateY(100%)
 	.integrations__icon--microsoft
 		right: 0
@@ -239,18 +239,18 @@
 		top: 100%
 		transform: translateY(-50%)
 		left: 38vw
-	.page-main-screen--product 
+	.page-main-screen--product
 		min-height: auto
 		padding-bottom: 15.200vw
 		background:  url('../img/union.svg') no-repeat top -37vw left 7.867vw/ 62vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
 	.page-main-screen--product:after
 		display: none
-	.section-header:after 
+	.section-header:after
 		display: none
 	.product-item
-		.col-lg-7 
-			order: 1 
-		.col-lg-5 
+		.col-lg-7
+			order: 1
+		.col-lg-5
 			order: 2
 	.product-item__img
 		width: 100%
@@ -264,7 +264,7 @@
 		right: 18vw
 		width: 9.867vw
 		height: 9.867vw
-	.product-item__image-2:before 
+	.product-item__image-2:before
 		display: none
 	.product-item--reverse .product-item__content
 		padding-left: 0
@@ -296,7 +296,7 @@
 		top: 77vw
 	.product-integrations
 		background: url('../img/pbg-m.svg')
-		background-size: cover 
+		background-size: cover
 		min-height: auto
 	.modules__item
 		padding-right: 7vw
@@ -315,12 +315,12 @@
 		order: 1
 	.product-integrations
 		padding-bottom: 103.200vw
-	
 
 
 
 
-	
+
+
 @media only screen and (max-width : 575px)
 	/**/
 	.page-main-screen--product-bg
@@ -332,7 +332,7 @@
 		top: 100%
 		transform: translateY(-50%)
 		left: 11.467vw
-	.page-main-screen--product 
+	.page-main-screen--product
 		min-height: auto
 		padding-bottom: 15.200vw
 		background:  url('../img/union.svg') no-repeat top -34.667vw left -37.867vw/ 88.267vw, linear-gradient(332.41deg, #5E2CE6 0%, #131DAA 40.05%, #192CD6 72.91%, #0A1193 100%)
@@ -340,7 +340,7 @@
 		padding-top: 12.533vw
 	.product__link
 		font-size: 4.533vw
-		img 
+		img
 			margin-left: 1.333vw
 			width: 3.600vw
 	.product-integrations__btn-wrapper
@@ -351,16 +351,16 @@
 		margin-bottom: 3.733vw
 		background: url('../img/product/module3.svg') no-repeat top -2vw right -2vw/20.800vw, linear-gradient(332.41deg, #5E2CE6 0%, #342CDC 30.04%, #192CD6 69.75%, #0A1193 100%)
 		padding: 13.867vw 11.467vw 13.333vw 11.467vw
-		img 
+		img
 			max-width: 27.200vw
 			margin-bottom: 4.267vw
-		.button 
+		.button
 			max-width: 100%
 			min-width: auto
 			font-size: 4vw
 			width: 100%
 			line-height: 1.33
-			br 
+			br
 				display: block
 	.module__title
 		font-size: 6.400vw
@@ -369,6 +369,3 @@
 		font-size: 4.267vw
 		padding-right: 0
 		margin-bottom: 5.600vw
-
-
-	

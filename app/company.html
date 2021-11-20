@@ -1,230 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Amadeo is a next-gen AI & NLP-powered platform that enables instant search and summarization of a company’s data & documentation across multiple platforms. This helps you to get an all-round vision on any subject.">
-	<meta name="keywords" content="amadeo nlp AI-powered" />
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Amadeo</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/bootstrap-grid.css">
-	<link rel="stylesheet" href="css/bootstrap-reboot.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
-	<link rel="stylesheet" href="css/style.css">
-	
-		<link rel="stylesheet" href="css/call-to-action.css">
-	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/footer.css">
-	<link rel="stylesheet" href="css/company.css">
-	
+	<!-- head:html -->
+	<!-- import head from components/head -->
+	<!-- endinject -->
+	<link href="css/company.css" rel="stylesheet">
+	<!-- head:js -->
+	<!-- import head js from components/head -->
+	<!-- endinject -->
 </head>
 <body>
 
 <!-- start page main-screen section -->
 <section class="page-main-screen page-main-screen--company">
-		
+
 	<div class="platform-circle circle1"></div>
 	<div class="platform-circle circle2"></div>
 	<div class="platform-circle circle3"></div>
 	<div class="platform-circle circle4"></div>
-		
+
 	<!-- start header -->
-<header class="header" id="header">
-      <div class="container-fluid">
-		<div class="logo">
-			<a href="index.html">
-				<img src="img/logos/amadeo_green_full.svg" alt="amadeo logo" width="144" height="30" />
-			</a>
-		</div>
+	<!-- menu:html -->
+	<!-- import menu from components/menu -->
+	<!-- endinject -->
+	<!-- end header -->
+	<div class="page-main-screen__content">
 
-		<div class="menu-btn" id="menu-btn">
-			<div class="menu-row"></div>
-			<div class="menu-row"></div>
-			<div class="menu-row"></div>
-		</div>
-
-		<div class="header__menu" id="header__menu">
-			<ul>
-
-				<li class="header__menu-item header__menu-item--bold header__menu-item--platform" id="header__menu-item--platform">
-					<div class="header__menu-link">Platform</div>
-					<div class="header__menu-item--sub-wrap" id="header__menu-item--sub-wrap">
-						<a href="product.html" class="header__menu-sub-item">Overview</a>
-						<a href="" class="header__menu-sub-item">Amadeo chatbot</a>
-						<a href="" class="header__menu-sub-item">Amadeo WEB platform </a>
-						<a href="" class="header__menu-sub-item">Amadeo APIs</a>
-						<a href="integrations.html" class="header__menu-sub-item">Integrations</a>
-
-					
-					</div>
-					<!-- start dropdown menu -->
-		<div class="dropdown__menu">
-			<div class="dropdown__menu-wrapper">
-					<div class="dropdown__menu-row">
-				<a href="product.html" class="dropdown__menu-item dropdown__menu-item--overview">
-				<div class="dropdown__menu-title dropdown__menu-title--green">
-					OVERVIEW
-				</div>
-				<img src="img/dropdown/ic_overview.svg" alt="overview icon" class="overview-icon" width="118" height="87" />
-				<span class="overwiew__sub-title">
-					Platform Overview
-				</span>
-
-				<p class="overwiew__text">Learn more about the platform,
-main features, and benefits</p>
-			</a>
-			<div class="dropdown__menu-item dropdown__menu-item--components">
-				<div class="dropdown__menu-item-content">
-					<div class="dropdown__menu-title">
-					COMPONENTS
-				</div>
-				<a href="" class="components__item">
-					<div class="components__item-title">
-						Amadeo Chatbot
-					</div>
-					<span class="components__item-text">
-						Integrate chatbot into your corporate communication tool
-					</span>
-				</a>
-
-				<a href="" class="components__item">
-					<div class="components__item-title">
-						Amadeo Web Platform <span class="comming-soon">Comming Soon</span>
-					</div>
-					<span class="components__item-text">
-					Get expanded functionality using web version
-					</span>
-				</a>
-
-				<a href="" class="components__item">
-					<div class="components__item-title">
-					Amadeo APIs <span class="comming-soon">Comming Soon</span>
-					</div>
-					<span class="components__item-text">
-						Use APIs to integrate Amadeo into the your knowledge base solutions
-					</span>
-				</a>
-			</div>
-			
-			</div>
-			<div class="dropdown__menu-item dropdown__menu-item--integrations">
-				<div class="dropdown__menu-title">
-					INTEGRATIONS
-				</div>
-				<div class="integrations__row integrations__row--first">
-					<div class="integrations__col">
-						<div class="integrations__item">
-							<img src="img/dropdown/Atlassian_Confluence_2017_logo.svg" alt="confluence logo" width="24" height="24" />
-							<div class="integrations__item-title">
-								Confluence
-							</div>
-						</div>
-
-					</div>
-					<div class="integrations__item">
-							<img src="img/dropdown/jira.svg" alt="jira logo" width="24" height="24" />
-							<div class="integrations__item-title">
-								Jira
-							</div>
-						</div>
-				</div>
-
-				<div class="integrations__row">
-					<div class="integrations__col">
-						<div class="integrations__item">
-							<img src="img/dropdown/githun.svg" alt="GitHub logo" width="24" height="24" />
-							<div class="integrations__item-title">
-								GitHub
-							</div>
-						</div>
-
-					</div>
-					<div class="integrations__item">
-							<img src="img/dropdown/Skype.svg" alt="skype logo" width="25" height="24" />
-							<div class="integrations__item-title">
-								Skype for <br> Business
-							</div>
-						</div>
-				</div>
-
-
-				<div class="integrations__row">
-					<div class="integrations__col">
-						<div class="integrations__item">
-							<img src="img/dropdown/slack.svg" alt="slack logo" width="24" height="24" />
-							<div class="integrations__item-title">
-								Slack
-							</div>
-						</div>
-
-					</div>
-					<div class="integrations__item">
-							<img src="img/dropdown/Microsoft-Teams.svg" alt="mikrosoft logo" width="27" height="24" />
-							<div class="integrations__item-title">
-								Microsoft <br>Teams
-							</div>
-						</div>
-				</div>
-
-				<a href="integrations.html" class="integrations__link">
-					View all integrations
-					<img src="img/arrow.svg" alt="arrow" width="15" height="8" />
-				</a>
-			</div>
-		</div>
-
-			</div>
-		</div>
-		
-		<!-- end dropdown menu -->
-
-				</li>
-				<li class="header__menu-item header__menu-item--bold">
-					<a href="solutions.html" class="header__menu-link">Solutions</a></li>
-				<li class="header__menu-item header__menu-item--bold">
-					<a href="technology.html" class="header__menu-link">Technology</a></li>
-				<li class="header__menu-item">
-					<a href="company.html" class="header__menu-link">Company</a></li>
-				<li class="header__menu-item">
-					<a href="resources.html" class="header__menu-link">Resources</a></li>
-				<li class="header__menu-item">
-					<a href="contact.html" class="header__menu-link">Contact</a></li>
-
-				
-			</ul>
-			<a href="" class="button header__button"
-				>GET A DEMO</a>
-		</div>
-
-		
-
-	</div>            
-</header>
-
-<!-- end header -->
-<div class="page-main-screen__content">
-
-	<div class="container-fluid">
-		<div class="page-main-screen__content-wrapper">
+		<div class="container-fluid">
+			<div class="page-main-screen__content-wrapper">
 				<h1 class="page-main-screen__title">
-		Amadeo story
-	</h1>
-	<div class="page-main-screen__text">
-		We are producing transformative insights that can change the way companies work with data & documentation
+					Amadeo story
+				</h1>
+				<div class="page-main-screen__text">
+					We are producing transformative insights that can change the way companies work with data&nbsp;&&nbsp;documentation
+				</div>
+			</div>
+		</div>
+
 	</div>
 
-	
-		</div>
-
-
-</div>
-
-</div>
-
-	
 </section>
 <!-- end page main-screen section -->
 
@@ -242,21 +56,19 @@ main features, and benefits</p>
 			<div class="col-md-7">
 				<div class="item__wrapper">
 					<div class="item">
-					<div class="item-text">
-						<p>
-							Amadeo is a data science, AI & NLP-driven company. Our solutions enable companies to work with data and documentation. With over thousand hours of training data, our product can currently cover multiple domains, scan millions of document pages instantly, and create great summaries. 	
-						</p>
-				
-				<p>
-				We have an audacious vision. As data scientists, we believe that the human mind is capable of producing transformative insights that can change a company’s fortunes. However, without the ability to analyze and synthesize vast amounts of information, companies may be missing the big picture. They can easily get caught up on details and leave the biggest problems unresolved and the biggest opportunities unfulfilled.	
-				</p>
-					
+						<div class="item-text">
+							<p>
+								Amadeo is a data science, AI & NLP-driven company. Our solutions enable companies to work with data and
+								documentation. With over a thousand hours of training data, our product can currently cover multiple
+								domains, scan millions of document pages instantly, and create great summaries.
+							</p>
+							<p>
+								We have an audacious vision. As data scientists, we believe that the human mind is capable of producing
+								transformative insights that can change the way companies work with data & documentation.
+							</p>
+						</div>
+					</div>
 				</div>
-				
-				</div>
-				</div>
-				
-				
 			</div>
 		</div>
 	</div>
@@ -264,77 +76,78 @@ main features, and benefits</p>
 </section>
 <!-- end mee section -->
 
-<!-- start lidership -->
-<section class="lidership">
+<!-- start leadership -->
+<section class="leadership">
 	<div class="container-fluid">
 		<h2 class="section-title center">
 			Leadership
 		</h2>
 		<div class="row">
 			<div class="col-md-6">
-				<div class="lidership__item">
-					<div class="lidership__img-wrapper">
-						<img src="img/company/sasha.png" alt="photo" width="438" height="435">
+				<div class="leadership__item">
+					<div class="leadership__img-wrapper">
+						<img alt="photo" height="435" src="img/company/alex.webp" width="438">
 					</div>
-					<div class="lidership__name">
-						Oleksandr Zemliachenko, 
+					<div class="leadership__name">
+						Oleksandr Zemliachenko,
 					</div>
-					<div class="lidership__position">
+					<div class="leadership__position">
 						Founder & CTO
 					</div>
-
 					<p>
-						Ph.D. in Computer Science, 48 peer-reviewed publications & 200+ citations, 1 patent, 3 monographs. Oleksandr is a subject matter expert & world famous speaker in the field of Image Recognition. Experienced in Artificial Intelligence, Machine Learning, Data-Driven Modeling & Optimization, and spent a decade developing world-class systems in Cyber Security, Image Recognition & IoT.
+						Ph.D. in Computer Science, 48 peer-reviewed publications & 200+ citations, 1 patent, 3 monographs. Oleksandr
+						is a subject matter expert & world famous speaker in the field of Image Recognition. Experienced in
+						Artificial Intelligence, Machine Learning, Data-Driven Modeling & Optimization, and spent a decade
+						developing world-class systems in Cyber Security, Image Recognition & IoT.
 					</p>
 					<div class="company-social">
-						<a href="">
-							<img src="img/company/ic_r.svg" alt="icon" width="25" height="24" />
+						<a href="https://www.researchgate.net/profile/Alexander-Zemliachenko" target="_blank" rel="noopener noreferrer">
+							<img alt="icon" height="24" src="img/company/ic_r.svg" width="25"/>
 						</a>
-						<a href="">
-							<img src="img/company/ic_in.svg" alt="icon" width="25" height="24" />
+						<a href="https://www.linkedin.com/in/alexander-zemliachenko" target="_blank" rel="noopener noreferrer">
+							<img alt="icon" height="24" src="img/company/ic_in.svg" width="25"/>
 						</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="lidership__item">
-					<div class="lidership__img-wrapper">
-						<img src="img/company/katya.png" alt="photo" width="441" height="439">
+				<div class="leadership__item">
+					<div class="leadership__img-wrapper">
+						<img alt="photo" height="439" src="img/company/kate.webp" width="441">
 					</div>
-						<div class="lidership__name">
+					<div class="leadership__name">
 						Kateryna Holub,
-						</div> 
-					<div class="lidership__position">
-						 Cofounder & CEO
 					</div>
-
+					<div class="leadership__position">
+						Cofounder & CEO
+					</div>
 					<p>
-						Ph.D. in Information Technologies, 30 peer-reviewed publications, 1 patent. Kateryna is proficient in building AI/ML/NLP products as well as Cyber Security & Fintech products. She is a Sr. Product Manager with broad experience in cross-functional IT projects and with a track record of developing and introducing products. Launched dozens of world-famous IT products as a Product Manager for prominent IT platforms.
+						Ph.D. in Information Technologies, 30 peer-reviewed publications, 1 patent. Proficient in building AI/ML/NLP
+						& Cyber Security products. Kateryna is a Sr. Product Manager with broad experience in cross-functional IT
+						projects and with a track record of developing and introducing products. Launched dozens of world-famous IT
+						products as a Product Manager for prominent IT platforms.
 					</p>
 					<div class="company-social">
-						<a href="">
-							<img src="img/company/ic_r.svg" alt="icon" width="25" height="24"/>
+						<a href="https://www.researchgate.net/profile/Kateryna-Holub" target="_blank" rel="noopener noreferrer">
+							<img alt="icon" height="24" src="img/company/ic_r.svg" width="25"/>
 						</a>
-						<a href="">
-							<img src="img/company/ic_in.svg" alt="icon" width="25" height="24" />
+						<a href="https://www.linkedin.com/in/kateryna-holub" target="_blank" rel="noopener noreferrer">
+							<img alt="icon" height="24" src="img/company/ic_in.svg" width="25"/>
 						</a>
-					</div>
 					</div>
 				</div>
 			</div>
-			<div class="team">
-		<img src="img/company/ic_team.png" alt="icon" width="163" height="172">
-		<div class="tam-tittle">
-			& our proficient data-scientists team
+		</div>
+		<div class="team">
+			<img alt="icon" height="175" src="img/company/ic_team.webp" width="168">
+			<div class="tam-tittle">
+				& our proficient data-scientists team
+			</div>
 		</div>
 	</div>
-		</div>
-	
-
-	
 
 </section>
-<!-- and lidership -->
+<!-- and leadership -->
 
 <!-- start mission -->
 <section class="mission">
@@ -342,216 +155,110 @@ main features, and benefits</p>
 		<h2 class="section-title center">
 			Our mission and core values
 		</h2>
-</div>
-		<div class="items-section">
-
-<div class="item-row">
-	<div class="container-fluid">
-		<div class="row">
-<div class="col-lg-6">
-				<div class="item-col">
-				
-					<div class="item-heading">
-						Our mission
-					</div>
-					<div class="item-col__text">
-					We are striving for excellence. That’s why our mission is high-impact & high-quality AI & NLP models engineering towards developing technological & innovative capabilities to meet the company’s information overload that is increasing every day.
-					</div>
-					
-				</div>
-			</div>
-				<div class="col-lg-6">
-				<img src="img/company/ic_mission.png" alt="nlp image" class="item-row__img" width="557" height="550" />
-			</div>
-
-			
-			
-		</div>
 	</div>
-		
-			
-		
-		
-	</div>
+	<div class="items-section">
 
-
-	<div class="item-row item-row--reverse">
-		<div class="container-fluid">
-			<div class="row"><div class="col-lg-6">
-				<img src="img/company/ic_customer.png" alt="search image" class="item-row__img" width="557" height="552" />
-			</div>
-			<div class="col-lg-6">
-				<div class="item-col">
-					
-					<div class="item-heading">
-						Customer first
-					</div>
-					<div class="item-col__text">
-						Despite that all companies anyway work with data & documentation, every company is unique and has its own story. We invest in researching your cases and then work backwards. Thus we work, understand and commit to make our customers’ lives easier and more efficient. Our customer’s success is our success.
-					</div>
-					
-				</div>
-			</div>
-			
-		</div>
-		</div>
-			
-		
-		
-	</div>
-
-
-<div class="item-row ">
-		<div class="container-fluid">
+		<div class="item-row">
+			<div class="container-fluid">
 				<div class="row">
-				
-<div class="col-lg-6">
-				<div class="item-col">
-				
-					<div class="item-heading">
-						Learning and improving
+					<div class="col-lg-6">
+						<div class="item-col">
+
+							<div class="item-heading">
+								Our mission
+							</div>
+							<div class="item-col__text">
+								We are striving for excellence. That’s why our mission is high-impact & high-quality AI & NLP model
+								engineering towards developing technological & innovative capabilities to meet the company’s information
+								overload that is increasing every day.
+							</div>
+						</div>
 					</div>
-					<div class="item-col__text">
-						We are respecting the scientific method and exploring more avenues, continuously training our NLP model and improving AI-powered search engine. We can't keep all our achievements to ourselves, so our data scientist team shares the latest research and findings on these technologies to help change the world for the better.
+					<div class="col-lg-6">
+						<img alt="nlp image" class="item-row__img" height="518" src="img/company/ic_mission.webp" width="518"/>
 					</div>
-					
 				</div>
-			</div>
-				<div class="col-lg-6">
-				<img src="img/company/ic_learning.png" alt="nlp image" class="item-row__img" width="557" height="550" />
 			</div>
 
-			
-			
-		</div>		
+		</div>
+
+		<div class="item-row item-row--reverse">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-6">
+						<img alt="search image" class="item-row__img" height="534" src="img/company/ic_customer.webp" width="534"/>
+					</div>
+					<div class="col-lg-6">
+						<div class="item-col">
+
+							<div class="item-heading">
+								Customer-first
+							</div>
+							<div class="item-col__text">
+								Despite the fact that all companies anyway work with data & documentation, every company is unique and
+								has its own story. We invest in researching your cases and then work backward. Thus we work, understand,
+								and commit to making our customers’ lives easier and more efficient. Our customer’s success is our
+								success.
+							</div>
+
+						</div>
+					</div>
+
 				</div>
-		
-		
-		
+			</div>
+
+		</div>
+
+
+		<div class="item-row ">
+			<div class="container-fluid">
+				<div class="row">
+
+					<div class="col-lg-6">
+						<div class="item-col">
+
+							<div class="item-heading">
+								Learning and improving
+							</div>
+							<div class="item-col__text">
+								We are respecting the scientific method and exploring more avenues, continuously training our NLP model
+								and improving AI-powered search engine. We can't keep all our achievements to ourselves, so our data
+								scientist team shares the latest research and findings on these technologies to help change the world
+								for the better.
+							</div>
+
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<img alt="nlp image" class="item-row__img" height="547" src="img/company/ic_learning.webp" width="547"/>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
 	</div>
 
-
-	
-		
-</div>
-	
 </section>
 <!-- end mission -->
 
-<!-- start call to action -->
 <div class="call-to-action__background"></div>
-<section class="call-to-action call-to-action--page">
-
-	<div class="call-to-action-wrapper">
-		<div class="container-fluid">
-		<div class="call-to-action__content">
-			<h2 class="call-to-action__title">
-				Run on your data & documentation more completely, more accurately
-			</h2>
-			<div class="call-to-action__text">
-				Amadeo address the challenge of company's unstructured documentation and data overload, giving you an all-round product vision and ensuring you never miss a thing.
-			</div>
-			<a href="" class="button button--transparent schedule-demo">
-				SCHEDULE A DEMO
-			</a>
-		</div>
-	</div>
-	</div>	
-</section>
+<!-- start call to action -->
+<!-- call-to-action:html -->
+<!-- import call-to-action from components/call-to-action -->
+<!-- endinject -->
 <!-- end call to action -->
 
 <!-- start footer  -->
-<footer class="footer">
-	<div class="container-fluid">
-		<div class="footer__content">
-			<div class="footer__row">
-				<div class="footer__logo">
-					<a href="index.html">
-						<img src="img/logos/amadeo_green_full.svg" alt="amadeo logo" width="125" height="26" />
-					</a>
-				</div>
-				<div class="footer__cols">
-					<div class="footer__platform">
-						<div class="footer__title">
-							PLATFORM
-						</div>
-						<a href="" class="footer__menu-link">Platform Overview</a>
-						<a href="" class="footer__menu-link">Amadeo Chatbot</a>
-						<a href="" class="footer__menu-link">Amadeo Web Platform</a>
-						<a href="" class="footer__menu-link">Amadeo APIs</a>
-						<a href="" class="footer__menu-link">Integrations</a>
-					</div>
-
-					<div class="footer__solutions">
-						<a href="" class="footer__title footer__title--bold">
-							SOLUTIONS
-						</a>
-
-						<a href="" class="footer__title footer__title--bold">
-							TECHNOLOGY
-						</a>
-
-						<a href="" class="footer__title footer__title--bold">
-							COMPANY
-						</a>
-
-						<a href="" class="footer__title footer__title--bold">
-							CONTACT US
-						</a>
-
-
-					</div>
-				</div>
-
-				<div class="footer__col">
-					<div class="connect">
-						<div class="footer__title">
-							LET'S CONNECT
-
-						</div>
-						<a href="mailto:contact.us@amadeo.tech" class="footer__menu-link footer__menu-link--mail">contact.us@amadeo.tech</a>
-					</div>
-
-					<div class="follow-us">
-						<div class="footer__title">
-							FOLLOW US ON
-
-						</div>
-
-						<div class="social__wrapper">
-							<a href="">
-								<img src="img/footer/Twitter_bird_logo_2012.svg" alt="twitter icon" width="30" height="24" />
-							</a>
-							<a href="">
-								<img src="img/footer/in.svg" alt="linkedin icon" width="24" height="24" />
-							</a>
-							<a href="">
-								<img src="img/footer/fb.svg" alt="facebook icon" width="24" height="24" />
-							</a>
-							<a href="">
-								<img src="img/footer/youtube.svg" alt="youtube icon" width="35" height="24" />
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="footer__bottom">
-			<div class="footer__bottom-menu">
-				<a href="">Terms of Use</a>
-				<a href=""> Amadeo Privacy Policy</a>
-				<a href="">Amadeo.tech Cookie Policy</a>
-			</div>
-
-			<div class="footer__copy">
-				©2021 Amadeo
-			</div>
-		</div>
-	</div>
-</footer>
+<!-- footer:html -->
+<!-- import footer from components/footer -->
+<!-- endinject -->
 <!-- end footer  -->
 
+<!-- cookie-alert:html -->
+<!-- import cookie-alert from components/cookie-alert -->
+<!-- endinject -->
 
 <script src="js/main.js"></script>
 
