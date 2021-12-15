@@ -20,7 +20,8 @@ const pages = [
   'product',
   'solutions',
   'technology',
-  'terms-of-use'
+  'terms-of-use',
+  'pricing'
 ];
 
 const BuildCss = async (pageName) => src([`app/sass/${pageName}.sass`])
