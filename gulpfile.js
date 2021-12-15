@@ -105,6 +105,7 @@ async function sassJob() {
 function htmlJob() {
   return src('app/*.html')
     .pipe(injectComponent('head', 'html'))
+    .pipe(injectComponent('body', 'html'))
     .pipe(injectComponent('head', 'js'))
     .pipe(injectComponent('updates-alert', 'html'))
     .pipe(injectComponent('menu', 'html'))
@@ -210,6 +211,7 @@ async function exportJob() {
     src('app/*.html')
       .pipe(injectComponent('head', 'html'))
       .pipe(injectComponent('head', 'js'))
+      .pipe(injectComponent('body', 'html'))
       .pipe(injectComponent('updates-alert', 'html'))
       .pipe(injectComponent('menu', 'html'))
       .pipe(injectComponent('call-to-action', 'html'))

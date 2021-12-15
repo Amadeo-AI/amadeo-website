@@ -5,53 +5,53 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-  <loc>https://amadeo.tech/</loc>
-  <lastmod>2021-11-04T11:09:46+00:00</lastmod>
+  <loc>https://www.amadeo.tech/</loc>
+  <lastmod>2021-12-14T11:09:46+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/product.html</loc>
-  <lastmod>2021-11-04T11:10:05+00:00</lastmod>
+  <loc>https://www.amadeo.tech/product.html</loc>
+  <lastmod>2021-12-14T11:10:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/platform.html</loc>
-  <lastmod>2021-11-04T11:10:01+00:00</lastmod>
+  <loc>https://www.amadeo.tech/platform.html</loc>
+  <lastmod>2021-12-14T11:10:01+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/integrations.html</loc>
-  <lastmod>2021-11-04T11:09:48+00:00</lastmod>
+  <loc>https://www.amadeo.tech/integrations.html</loc>
+  <lastmod>2021-12-14T11:09:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/solutions.html</loc>
-  <lastmod>2021-11-04T11:10:05+00:00</lastmod>
+  <loc>https://www.amadeo.tech/solutions.html</loc>
+  <lastmod>2021-12-14T11:10:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/technology.html</loc>
-  <lastmod>2021-11-04T11:10:06+00:00</lastmod>
+  <loc>https://www.amadeo.tech/technology.html</loc>
+  <lastmod>2021-12-14T11:10:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/company.html</loc>
-  <lastmod>2021-11-04T10:53:19+00:00</lastmod>
+  <loc>https://www.amadeo.tech/company.html</loc>
+  <lastmod>2021-12-14T10:53:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/contact.html</loc>
-  <lastmod>2021-11-04T10:53:19+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.amadeo.tech/contact.html</loc>
+  <lastmod>2021-12-14T10:53:19+00:00</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/terms-of-use.html</loc>
-  <lastmod>2021-11-04T11:10:07+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.amadeo.tech/terms-of-use.html</loc>
+  <lastmod>2021-12-14T11:10:07+00:00</lastmod>
+  <priority>0.20</priority>
 </url>
 <url>
-  <loc>https://amadeo.tech/privacy-policy.html</loc>
-  <lastmod>2021-11-04T11:10:02+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://www.amadeo.tech/privacy-policy.html</loc>
+  <lastmod>2021-12-14T11:10:02+00:00</lastmod>
+  <priority>0.20</priority>
 </url>
 </urlset>
